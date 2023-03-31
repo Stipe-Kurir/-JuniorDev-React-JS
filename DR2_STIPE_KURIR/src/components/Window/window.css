@@ -1,0 +1,241 @@
+.windowContainer{
+    width:1024px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    border: 3px solid black;
+}
+.windowDate{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.windowElements
+{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+   /* background-color: chartreuse;*/
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.windowSettings
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* background-color: aqua; */
+}
+.scoreCounterTitle{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+.windowScoreButtons{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.matchMoments
+{
+    width:100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(127, 238, 255);
+    align-items: center;
+}
+.matchMomentsTitle
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: antiquewhite;
+}
+.buttonGreen
+{
+    background-color: rgb(48, 217, 87);
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    border:3px solid black;
+}
+.regularButton
+{
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border:3px solid black;
+}
+.regularButton:hover{
+    cursor: pointer;
+}
+.buttonGreen:hover{
+    cursor: pointer;
+}
+
+.prikazStatistike
+{
+    width:100%;
+    height: 100%;
+}
+
+
+.prikazKronologije
+{
+    width:100%;
+    height:100%;
+   /* background-color: chartreuse;*/
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden; 
+    
+}
+.povratElements
+{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    font-size: 14px;
+    /*background-color: coral;*/
+    list-style: none;
+    width: 100%;
+   font-weight: bold;
+}
+.botunPovrat:hover{
+    cursor: pointer;
+}
+.pov{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listaTitle
+{
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.povrat{
+    border: none;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width:25px;
+    height: 25px;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.povrat:hover{
+cursor: pointer;
+}
+
+
+.statsContainer
+{
+    width: 100%;
+    height:100% ;
+    /*background-color: crimson;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statsTeams{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*background-color:coral;*/
+    justify-content: space-between;
+}
+
+.statTeam{
+    width:50%;
+    /*background-color: beige;*/
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+ 
+.statsElements{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.statElm
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*background-color: azure;*/
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid black;
+}
+.itemNumber
+{
+    height: 100%;
+    width:50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itemCounter
+{
+    width:50px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*gap:10px;*/
+    /*background-color: bisque;*/
+}
+
+.titleStat{
+    text-transform: uppercase;
+    font-weight: bold;
+    width:100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+

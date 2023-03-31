@@ -1,0 +1,15 @@
+.checkboxElement:hover{
+    cursor: pointer;
+}
+.checkboxElement{
+    height:18px;
+    width: 18px;
+}
+.checkElem{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+.label{
+    font-size: 16px;
+}

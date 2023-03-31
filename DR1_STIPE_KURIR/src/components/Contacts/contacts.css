@@ -1,0 +1,28 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    /*background-color: aquamarine;*/
+    padding:10px;
+}
+.title
+{
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(127, 168, 243);
+}
+.item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+.git{
+    cursor: pointer;
+    text-decoration: none;
+}
+.contactsDesc
+{
+    font-weight: bold;
+}

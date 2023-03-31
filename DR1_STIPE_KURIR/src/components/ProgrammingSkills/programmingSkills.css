@@ -1,0 +1,16 @@
+.itemsProg{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+   /* background-color: antiquewhite;*/
+    
+}
+.itemProg{
+    font-weight:bold;
+    width: 25%;
+}
+.itemDescProg
+{
+    width:75%;
+   /* background-color: aquamarine;*/
+}

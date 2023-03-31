@@ -1,0 +1,17 @@
+.logoContainer{
+    width:300px;
+    height:100%;
+    /*background-color:coral;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.LogoImage{
+    padding-top: 10px;
+}
+.LogoName
+{
+    text-transform: uppercase;
+    font-weight: bold;
+}

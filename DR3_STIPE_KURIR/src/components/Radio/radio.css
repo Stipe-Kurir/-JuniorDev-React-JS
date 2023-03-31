@@ -1,0 +1,10 @@
+
+.radioElement{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.element{
+    display: flex;
+    flex-direction: row;
+}
