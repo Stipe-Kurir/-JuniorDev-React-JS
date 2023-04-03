@@ -1,0 +1,73 @@
+.quizContainer
+{
+    width:1024px;
+    height:700px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+.odabir
+{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.opcija{
+    width:100%;
+   /* background-color: antiquewhite;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.naslov{
+    width:70%;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.quizButton
+{
+    width:70%;
+    height: 50px;
+    background-color: rgb(234, 232, 232);
+    border: none;
+    cursor: pointer;
+    border: solid black 2px;
+    font-size: 15px;
+}
+
+.startButton
+{
+    margin-top: 20px;
+    width:20%;
+    border:none;
+    border-radius:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: rgb(234, 232, 232);
+    font-weight: bold;
+    font-size: 20px;
+}
+.startButton:hover{
+    cursor: pointer;
+    background-color: rgb(54, 241, 126);
+    transition: 0.3s;
+    border:2px solid black;
+}
