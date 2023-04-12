@@ -1,0 +1,72 @@
+{
+  "Odabir": [
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "S",
+        "slika": "./trousers.png",
+        "boja": "#00ff40"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "22",
+        "cijena_kupnje": "22"
+      },
+      "id": 19
+    },
+    {
+      "odabrano": {
+        "odjeća": "Majice",
+        "velicina": "M",
+        "slika": "./t-shirt.png",
+        "boja": "#ff8000"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "dada",
+        "cijena_kupnje": "22"
+      },
+      "id": 21
+    },
+    {
+      "odabrano": {
+        "odjeća": "Jakete",
+        "velicina": "L",
+        "slika": "./jacket.png",
+        "boja": "#ff8000"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "dada",
+        "cijena_kupnje": "22"
+      },
+      "id": 30
+    },
+    {
+      "odabrano": {
+        "odjeća": "Suknje",
+        "velicina": "S",
+        "slika": "./skirt.png",
+        "boja": "#00ff40"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-02",
+        "ducan_kupnje": "nike",
+        "cijena_kupnje": "22.03"
+      },
+      "id": 32
+    }
+  ],
+  "Velicine": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "Odjeca": [
+    "Suknje",
+    "Hlače",
+    "Majice",
+    "Jakete"
+  ]
+}
