@@ -3,9 +3,25 @@ import stil from "./navbar.module.css"
 import UserContext from '../Context/UserContext'
 import { useContext } from 'react'
 import { useState } from 'react'
-import {Link} from "react-router-dom"
+import {Link,NavLink} from "react-router-dom"
 
 const Navbar = () => {
+
+const navigationAdmin=[
+    {name:'o nama',href:'/'},
+    {name:'popis',href:'/popis'},
+    {name:'donacije',href:'/donacije'},
+    {name:'obavijesti',href:'/obavijesti'},
+    {name:'unos',href:'/unos'},
+]
+
+// const navigationUser=[
+//     {name:'o nama',href:'/'},
+//     {name:'popis',href:'/popis'},
+//     {name:'donacije',href:'/donacije'},
+//     {name:'obavijesti',href:'/obavijesti'},
+// ]
+
 
 const {context,setContext}=useContext(UserContext);
 
@@ -27,21 +43,38 @@ const {context,setContext}=useContext(UserContext);
                 </div>
 
                 <div>
-                    <input type="radio"  name="user" value="korisnik" onChange={promjeniContext}/>
+                    <input type="radio"  name="user" value="korisnik" defaultChecked={context==="korisnik"} onChange={promjeniContext}/>
                     <label htmlFor="korisnik">Korisnik</label>
                 </div>
                 
             </div>
         </div>
+      
+
         <div className={stil.NavOpcije}>
-            <div className={stil.Opcija}><Link to="/">O NAMA</Link></div>
-            <div className={stil.Opcija}><Link to="/popis">POPIS</Link></div>
-            <div className={stil.Opcija}><Link to="/donacije">DONACIJE</Link></div>
-            <div className={stil.Opcija}><Link to="/obavijesti">OBAVIJESTI</Link></div>
-            <div className={stil.Opcija}><Link to="/unos">UNOS</Link></div>
-        </div>
+            {navigationAdmin.map((item)=>(
+                <NavLink
+                key={item.name}
+                to={item.href}
+                //destrukturira si da ti samo vrati isActive
+                className={({isActive})=>{
+                    return stil.Opcija ,
+                    (isActive ? stil.OpcijaAktivna:
+                        stil.Opcija)  
+                }}
+                >
+                    {item.name}
+                </NavLink>
+            ))
+
+            }
+           
+        </div> 
+        
+       
     </div>
   )
 }
 
 export default Navbar
+

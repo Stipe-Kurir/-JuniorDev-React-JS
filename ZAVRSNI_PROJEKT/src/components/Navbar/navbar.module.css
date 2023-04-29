@@ -4,6 +4,8 @@
     display: flex;
     flex-direction:column;
     background-color: antiquewhite;
+    position:fixed;
+    z-index:999;
 }
 
 .NavNaslov{
@@ -16,6 +18,7 @@
 
 .naslov{
     width:80%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,6 +31,7 @@
 
 .korisnik{
 width:20%;
+height: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -42,6 +46,7 @@ justify-content: center;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .Opcija{
@@ -56,9 +61,34 @@ justify-content: center;
     font-weight: bold;
     font-family: Garamond, serif;
     font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
 }
+
 .Opcija:hover{
     background-color: azure;
     transition: 0.3s;
     cursor:pointer;
+}
+
+.OpcijaAktivna{
+    width:20%;
+    height:80%;
+    background-color: rgb(36, 172, 88);
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Garamond, serif;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.OpcijaUnos{
+
 }

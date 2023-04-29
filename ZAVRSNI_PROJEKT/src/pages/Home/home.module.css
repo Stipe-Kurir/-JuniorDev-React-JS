@@ -1,0 +1,31 @@
+.HomeContainer{
+    width:1400px;
+    /* height:1000px; */
+    background-color: blueviolet;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.Slider{
+    width:1000px;
+    height:400px;
+     /* background-color: antiquewhite;  */
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Informacije{
+    width:1000px;
+    height:300px;
+    background-color: antiquewhite;
+}
+.Lokacija{
+    width:1000px;
+    height:300px;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+}
