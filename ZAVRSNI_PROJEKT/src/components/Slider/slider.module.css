@@ -42,11 +42,11 @@
     right:10px;
 }
 .arrowL:hover{
-    scale:1.1;
+    scale:1.2;
     transition:0.2s;
 }
 .arrowR:hover{
-    scale:1.1;
+    scale:1.2;
     transition:0.2s;
 }
 

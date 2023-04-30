@@ -47,11 +47,13 @@ function App() {
 
   return (
     <div className='AppContainer'>
+
      <UserContext.Provider value={{context,setContext}}  >
   
      <RouterProvider router={router} />
     
      </UserContext.Provider>
+     
     </div>
   )
 }

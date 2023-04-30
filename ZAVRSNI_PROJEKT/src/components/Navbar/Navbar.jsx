@@ -2,7 +2,7 @@ import React from 'react'
 import stil from "./navbar.module.css"
 import UserContext from '../Context/UserContext'
 import { useContext } from 'react'
-import { useState } from 'react'
+
 import {Link,NavLink} from "react-router-dom"
 
 const Navbar = () => {
@@ -14,13 +14,6 @@ const navigationAdmin=[
     {name:'obavijesti',href:'/obavijesti'},
     {name:'unos',href:'/unos'},
 ]
-
-// const navigationUser=[
-//     {name:'o nama',href:'/'},
-//     {name:'popis',href:'/popis'},
-//     {name:'donacije',href:'/donacije'},
-//     {name:'obavijesti',href:'/obavijesti'},
-// ]
 
 
 const {context,setContext}=useContext(UserContext);
