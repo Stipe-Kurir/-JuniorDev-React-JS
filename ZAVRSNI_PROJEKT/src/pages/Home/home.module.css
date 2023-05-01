@@ -1,12 +1,13 @@
 .HomeContainer{
     width:1400px;
     /* height:1000px; */
-    background-color: blueviolet;
+    background-color: rgb(100, 201, 146);
     margin-top: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:20px;
+    border: 3px solid black;
 }
 
 .Slider{
@@ -21,12 +22,14 @@
 .Informacije{
     width:1000px;
     height:300px;
-    background-color: antiquewhite;
+    background-color: rgb(248, 242, 212);
+
 }
 .Lokacija{
     width:1000px;
     height:300px;
-    background-color: antiquewhite;
+    background-color: rgb(248, 242, 212);
+
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;

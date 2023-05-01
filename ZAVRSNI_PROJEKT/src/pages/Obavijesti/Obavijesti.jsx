@@ -3,37 +3,266 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import stil from './obavijesti.module.css'
 import UserContext from '../../components/Context/UserContext'
-import { useState } from 'react'
-import { useContext } from 'react'
+import { useState,useContext,useEffect } from 'react'
+import axios from "axios"; 
+import PrikazObavijesti from '../../components/PrikazObavijesti/PrikazObavijesti'
+
 
 const Obavijesti = () => {
 
-const korisnik=useContext(UserContext);
-//MORAT CES OVDJE DOHVACAT PODATKE IZ BAZE ZA OBAVIJESTI
-//USe state za kliknut botun unos forma,kad se forma spremi 
-//onda se botun stavi na false te se forma sakrije
 
-//napravi da obavijesti scrollas posebno,a ne da moras spustat cilu stranicu
+const korisnik=useContext(UserContext);
+const [botun,postaviBotun]=useState(false);
+const [obavijesti, postaviObavijesti] = useState([]);
+const current=new Date();
+
+const [podaci,postaviPodatke]=useState({
+  naslov:"",
+  datum:"",
+  tekst:"",
+  vazno:false
+})
+
+const vratiZadano=()=>{
+  podaci.tekst=""
+  podaci.naslov=""
+  podaci.datum=""
+  podaci.vazno=false
+  DodajObavijest();
+}
+
+
+function obradiPodatke(objekt){
+  return {
+    "naslov":objekt.naslov,
+    "datum":`${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`,
+    "tekst":objekt.tekst,
+    "vazno":objekt.vazno
+  }
+}
+
+function obradiPodatkeKorisnik(objekt){
+  return {
+    "naslov":objekt.naslov,
+    "datum":`${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`,
+    "tekst":objekt.tekst,
+    "vazno":false
+  }
+}
+
+const UnosVrijednosti=(e)=>{
+  const {name, value}=e.target;
+  postaviPodatke({...podaci,[name]:value})
+}
+
+const UnosCheck=()=>{
+  if(podaci.vazno===false)
+  {
+     postaviPodatke({...podaci,vazno:true})
+  }
+    else{
+      postaviPodatke({...podaci,vazno:false})
+    }
+
+}
+
+const DodajObavijest=()=>{
+    postaviBotun(!botun);
+}
+
+const UnesiObavijest=(e)=>{
+  e.preventDefault();
+  const ObradeniPodaci=obradiPodatke(podaci);
+
+  axios.post("http://localhost:3001/obavijesti", ObradeniPodaci)
+        .then(rez => {
+          axios.get("http://localhost:3001/obavijesti")
+            .then(rez => postaviObavijesti(rez.data));
+        })
+
+  vratiZadano();
+ 
+}
+
+const UnesiObavijestKorisnik=(e)=>{
+  e.preventDefault();
+  const ObradeniPodaci=obradiPodatkeKorisnik(podaci);
+
+  axios.post("http://localhost:3001/obavijesti", ObradeniPodaci)
+        .then(rez => {
+          axios.get("http://localhost:3001/obavijesti")
+            .then(rez => postaviObavijesti(rez.data));
+        })
+
+        vratiZadano();
+
+}
+
+useEffect(() => {
+  axios
+    .get("http://localhost:3001/Obavijesti")
+    .then(res => postaviObavijesti(res.data));
+}, []);
+
+
+
+// console.log("OBAVIJESIT IZ BAZE",obavijesti)
 
   return (
     <div>
      
      <Navbar />
-       {korisnik.context==="admin" ?
+       
        <div className={stil.ObavijestiContainer}>
-       <div className={stil.UnosObavijesti}>
-        <div className={stil.UnosBotun}>botun </div>
-        <div className={stil.UnosForma}>forma</div>
-       </div>
-       <div className={stil.PrikazObavijesti}>Lista,jedno ispod druge,to mos vidit kako si napravia za rezultate ispis rezultata da se ispisuju</div>
-       </div>:
-       <div className={stil.ObavijestiContainer}>
-        <div className={stil.PrikazObavijesti}>Lista,jedno ispod druge,to mos vidit kako si napravia za rezultate ispis rezultata da se ispisuju</div>
-       </div>
-       }
+        <div className={stil.UnosObavijesti}>
+          <div className={stil.UnosBotun}>
+  
+            <button className={stil.BotunObavijest} onClick={DodajObavijest}>Nova obavijest</button>
+          </div>
+          <div className={stil.ObavijestiForma}>
+
+            {botun ? 
+
+              <div className={stil.NovaObavijest}>
+
+                <div className={stil.NovaObavijestNaslov}>Unosite novu obavijest</div>
+
+                
+                   { korisnik.context === "admin" ?
+
+                      <form className={stil.NovaObavijestForm} onSubmit={UnesiObavijest}>
+
+                        <div className={stil.Input}>
+                          <div className={stil.Opis}>
+                            <label htmlFor="naslov">NASLOV:</label> 
+                          </div>
+                          <input type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
+                        </div>
+
+                        <div className={stil.Input}>
+                          <div className={stil.Opis}>
+                            <label htmlFor="tekst">TEKST:</label> 
+                          </div>
+                          <input type="text" id="tekst" name="tekst" minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti}  required/>
+                        </div>
+
+                      <div className={stil.NovaObavijestPotvrda}>
+                          <div className={stil.Input}>
+                            <div className={stil.Opis}>
+                              <label htmlFor="vazno">VAŽNO:</label> 
+                            </div>
+                            <input className={stil.Vazno} type="checkbox"  id="vazno" value={podaci.vazno} onChange={UnosCheck} checked={podaci.vazno===true} name="vazno" />
+                          </div>
+
+                          <div className={stil.NovaObavijestSpremi}>
+                            <button  className={stil.Spremi} type="submit">Spremi</button>
+                          </div>
+                        </div>
+
+                      </form>  
+
+                      :
+                    
+                      <form className={stil.NovaObavijestForm} onSubmit={UnesiObavijestKorisnik}>
+
+                        <div className={stil.Input}>
+                          <div className={stil.Opis}>
+                            <label htmlFor="naslov">NASLOV:</label> 
+                          </div>
+                          <input type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
+                        </div>
+
+                        <div className={stil.Input}>
+                          <div className={stil.Opis}>
+                            <label htmlFor="tekst">TEKST:</label> 
+                          </div>
+                          <input type="text" id="tekst" name="tekst" minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti}  required/>
+                        </div>
+
+                        <div className={stil.NovaObavijestPotvrda}>
+                          <div className={stil.NovaObavijestSpremi}>
+                            <button  className={stil.Spremi} type="submit">Spremi</button>
+                          </div>
+                        </div>
+
+                      </form>  
+
+                   } 
+                           
+              </div>
+               : 
+               <div></div>}
+          </div>
+        </div>
+      
+         <div className={stil.PrikazObavijesti}>
+          {obavijesti.sort((a, b) => new Date(...b.datum.split('/').reverse()) - new Date(...a.datum.split('/').reverse())).map(rez=>(
+            <PrikazObavijesti key={rez.id} podaci={rez} promjena={postaviObavijesti}/>
+          )) }
+        </div>
+      </div>
       <Footer />
+
     </div>
   )
+
 }
 
 export default Obavijesti
+
+
+ {/* <div className={stil.PrikazObavijesti}>
+          {obavijesti.map(rez=>(
+            <div key={rez.id}>{rez.naslov}</div>
+          )) }
+        </div> */}
+
+        // {botun ? 
+
+        //   <div className={stil.NovaObavijest}>
+
+        //     <div className={stil.NovaObavijestNaslov}>Unosite novu obavijest</div>
+
+        //     <form className={stil.NovaObavijestForm} onSubmit={UnesiObavijest}>
+        //       <div className={stil.Input}>
+        //         <div className={stil.Opis}>
+        //           <label htmlFor="naslov">NASLOV:</label> 
+        //           </div>
+        //           <input type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
+        //       </div>
+        //       <div className={stil.Input}>
+        //       <div className={stil.Opis}>
+        //           <label htmlFor="tekst">TEKST:</label> 
+        //           </div>
+        //           <input type="text" id="tekst" name="tekst" minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti}  required/>
+        //       </div>
+             
+        //        {korisnik.context === "admin" ?
+
+        //        <div className={stil.NovaObavijestPotvrda}>
+        //            <div className={stil.Input}>
+        //       <div className={stil.Opis}>
+        //           <label htmlFor="vazno">VAŽNO:</label> 
+        //           </div>
+        //           <input className={stil.Vazno} type="checkbox"  id="vazno" value={podaci.vazno} onChange={UnosCheck}  checked={podaci.vazno} name="vazno" />
+        //       </div>
+        //           <div className={stil.NovaObavijestSpremi}>
+        //           <button  className={stil.Spremi} type="submit">Spremi</button>
+        //         </div>
+        //         </div>
+
+        //         :
+        //         <div className={stil.NovaObavijestPotvrda}>
+        //           <div className={stil.NovaObavijestSpremi}>
+        //           <button  className={stil.Spremi} type="submit">Spremi</button>
+        //         </div>
+        //         </div>
+
+        //        }
+                
+    
+        //     </form>  
+                       
+        //   </div>
+        //    : 
+        //    <div></div>}

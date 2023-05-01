@@ -53,15 +53,7 @@ const Slider = () => {
                 </div> 
 
             </div>
-
-                 {/* <div className={stil.sliderPointers}>
-                    <img onClick={()=>handleClickPointer(0)} src="new-moon.png" alt="" width="15px" height="15px" className={stil.sliderPointer}/>
-                    <img onClick={()=>handleClickPointer(1)} src="new-moon.png" alt="" width="15px" height="15px" className={stil.sliderPointer}/>
-                    <img onClick={()=>handleClickPointer(2)} src="new-moon.png" alt="" width="15px" height="15px" className={stil.sliderPointer}/>
-                    <img onClick={()=>handleClickPointer(3)} src="new-moon.png" alt="" width="15px" height="15px" className={stil.sliderPointer}/>
-                </div>  */}
                
-
         </div>
   )
 }

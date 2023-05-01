@@ -2,8 +2,7 @@ import React from 'react'
 import stil from "./navbar.module.css"
 import UserContext from '../Context/UserContext'
 import { useContext } from 'react'
-
-import {Link,NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 const Navbar = () => {
 
