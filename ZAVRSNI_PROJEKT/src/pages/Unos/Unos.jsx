@@ -2,21 +2,160 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import stil from './unos.module.css'
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
 import UserContext from '../../components/Context/UserContext'
+import axios from 'axios';
 
 const Unos = () => {
 
   const korisnik=useContext(UserContext);
+
+  const [podaci,postaviPodatke]=useState({
+    ime:"",
+    vrsta:"",
+    cip:false,
+    godine:"",
+    opis:"",
+    pregled:"",
+    udomljen:false
+  })
+
+  const zadano={
+    ime:"",
+    vrsta:"",
+    cip:false,
+    godine:"",
+    opis:"",
+    pregled:"",
+    udomljen:false
+  }
+
+  const vratiZadano=()=>{
+    postaviPodatke(zadano)
+
+  }
+
+
+  function obradiPodatke(objekt){
+    return {
+      "ime":objekt.ime,
+      "vrsta":objekt.vrsta,
+      "cip":objekt.cip,
+      "godine":objekt.godine,
+      "opis":objekt.opis,
+      "pregled":objekt.pregled,
+      "udomljen":false
+    }
+  }
+
+  
+  const UnosVrijednosti=(e)=>{
+    const {name, value}=e.target;
+    postaviPodatke({...podaci,[name]:value})
+  }
+
+  const UnesiZivotinju=(e)=>{
+    e.preventDefault();
+    const ObradeniPodaci=obradiPodatke(podaci);
+  
+    axios.post("http://localhost:3001/zivotinje", ObradeniPodaci)
+
+    vratiZadano()
+   
+   
+  }
+
+  const UnosCheck=()=>{
+    if(podaci.cip===false)
+    {
+       postaviPodatke({...podaci,cip:true})
+    }
+      else{
+        postaviPodatke({...podaci,cip:false})
+      }
+  
+  }
+
+ 
+
 
   return (
     <div>
       <Navbar />
       <div className={stil.UnosContainer}>
        {korisnik.context==="admin" ?
-       <div>ADMIN</div>:
-       <div>NEDOZBOLJEN PRISTUP NISTE ADMIn</div>
+       <div className={stil.UnosAdmin}>
+        <div className={stil.UnosAdminNaslov}>UNOS NOVE ŽIVOTINJE</div>
+        <form className={stil.UnosAdminForm} onSubmit={UnesiZivotinju}>
+          
+          <div className={stil.Input}>  
+                <label className={stil.label} htmlFor="ime">IME:</label>
+                <div className={stil.InputBar}>
+                <input className={stil.input} type="text" id="ime" name="ime" value={podaci.ime} onChange={UnosVrijednosti} maxLength="20"  required/>
+                </div>
+          </div>
+          
+          <div className={stil.Vrsta}>
+            <div className={stil.label}>VRSTA:</div>
+            <div className={stil.radioElements}>
+                    <div className={stil.element}>
+                      <input className={stil.radioElm} type="radio" id="element" name="element"  value={"Pas"} onChange={UnosVrijednosti}  required />
+                      <label  className={stil.radioLabel} htmlFor="element">Pas</label>
+                    </div>
+                    <div className={stil.element}>
+                      <input className={stil.radioElm} type="radio" id="element" name="element" value={"Mačka"} onChange={UnosVrijednosti}   required />
+                      <label className={stil.radioLabel} htmlFor="element">Mačka</label>
+                    </div> 
+                    <div className={stil.element}>
+                      <input className={stil.radioElm} type="radio" id="element" name="element"  value={"Ostalo"} onChange={UnosVrijednosti}   required />
+                      <label className={stil.radioLabel} htmlFor="element">Ostalo</label>
+                    </div> 
+            </div>
+          </div>
+          <div className={stil.Input}>  
+                <label  htmlFor="godine">GODINE:</label>
+                <input type="number" id="godine" name="godine" min={0} value={podaci.godine} onChange={UnosVrijednosti}  required/>
+          </div>
+          <div className={stil.Input}>  
+                <label className={stil.label} htmlFor="opis">OPIS:</label>
+                <div className={stil.InputBar}>
+                <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={podaci.opis} onChange={UnosVrijednosti}  required/>
+                </div>
+          </div>
+          <div className={stil.Input}> 
+            <label  htmlFor="pregled">UNESITE DATUM PREGLEDA:</label>
+              <input 
+              // className={stil.OdabirUnos}
+              type="date"
+              name="pregled"
+              value={podaci.pregled} 
+              onChange={UnosVrijednosti}
+              required>
+              </input>
+        </div>
+        <div className={stil.Check}>
+            <input className={stil.CheckBox} type="checkbox" onChange={UnosCheck} id="cip"  value={podaci.cip} checked={podaci.cip===true}
+              name="cip" />
+            <label htmlFor="cip">ČIPIRAN</label> 
+            
+        </div>
+
+       
+          <button  className={stil.Spremi} type="submit">Spremi</button>
+       
+
+        </form>
+
+       </div>
+       :
+       <div className={stil.UnosKorisnik}>
+          <div className={stil.UnosKorisnikTekst}>
+            NEDOZVOLJEN PRISTUP, MORATE BIT PRIJAVLJENI KAO ADMINISTRATOR
+          </div>
+        </div>
+
        }
+
        </div>
       <Footer />
     </div>

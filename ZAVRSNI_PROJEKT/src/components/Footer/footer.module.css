@@ -1,9 +1,11 @@
 .footer{
-    width:100%;
+    width:1400px;
     height:100px;
     background-color: darkgray;
     display: flex;
     flex-direction: row;
+    border: 3px solid black;
+    border-top: none;
 }
 .footerInfo{
     width:40%;
