@@ -12,29 +12,27 @@ const Unos = () => {
 
   const [podaci,postaviPodatke]=useState({
     ime:"",
-    vrsta:"",
+    vrsta:"Ostalo",
     cip:false,
     godine:"",
     opis:"",
     pregled:"",
-    udomljen:false
   })
 
   const zadano={
     ime:"",
-    vrsta:"",
+    vrsta:"Ostalo",
     cip:false,
     godine:"",
     opis:"",
     pregled:"",
-    udomljen:false
   }
 
   const vratiZadano=()=>{
     postaviPodatke(zadano)
-
   }
 
+  
 
   function obradiPodatke(objekt){
     return {
@@ -44,15 +42,17 @@ const Unos = () => {
       "godine":objekt.godine,
       "opis":objekt.opis,
       "pregled":objekt.pregled,
-      "udomljen":false
+      "udomljen":"nije udomljen"
     }
   }
 
-  
+
   const UnosVrijednosti=(e)=>{
-    const {name, value}=e.target;
-    postaviPodatke({...podaci,[name]:value})
+    const {id, value}=e.target;
+    postaviPodatke({...podaci,[id]:value})
   }
+
+  
 
   const UnesiZivotinju=(e)=>{
     e.preventDefault();
@@ -61,7 +61,6 @@ const Unos = () => {
     axios.post("http://localhost:3001/zivotinje", ObradeniPodaci)
 
     vratiZadano()
-   
    
   }
 
@@ -91,7 +90,7 @@ const Unos = () => {
           <div className={stil.Input}>  
                 <label className={stil.label} htmlFor="ime">IME:</label>
                 <div className={stil.InputBar}>
-                <input className={stil.input} type="text" id="ime" name="ime" value={podaci.ime} onChange={UnosVrijednosti} maxLength="20"  required/>
+                <input className={stil.input} type="text" id="ime" name="ime" value={podaci.ime} onChange={UnosVrijednosti} maxLength="20" required/>
                 </div>
           </div>
           
@@ -99,17 +98,18 @@ const Unos = () => {
             <div className={stil.label}>VRSTA:</div>
             <div className={stil.radioElements}>
                     <div className={stil.element}>
-                      <input className={stil.radioElm} type="radio" id="element" name="element"  value={"Pas"} onChange={UnosVrijednosti}  required />
-                      <label  className={stil.radioLabel} htmlFor="element">Pas</label>
+                      <input className={stil.radioElm} type="radio" id="vrsta" name="element"  value="Ostalo" onChange={UnosVrijednosti}  required />
+                      <label className={stil.radioLabel} htmlFor="Ostalo">Ostalo</label>
+                    </div> 
+                    <div className={stil.element}>
+                      <input className={stil.radioElm} type="radio" id="vrsta" name="element"  value="Pas" onChange={UnosVrijednosti}  required />
+                      <label  className={stil.radioLabel} htmlFor="Pas">Pas</label>
                     </div>
                     <div className={stil.element}>
-                      <input className={stil.radioElm} type="radio" id="element" name="element" value={"Mačka"} onChange={UnosVrijednosti}   required />
-                      <label className={stil.radioLabel} htmlFor="element">Mačka</label>
+                      <input className={stil.radioElm} type="radio" id="vrsta" name="element" value="Mačka" onChange={UnosVrijednosti}  required />
+                      <label className={stil.radioLabel} htmlFor="Mačka">Mačka</label>
                     </div> 
-                    <div className={stil.element}>
-                      <input className={stil.radioElm} type="radio" id="element" name="element"  value={"Ostalo"} onChange={UnosVrijednosti}   required />
-                      <label className={stil.radioLabel} htmlFor="element">Ostalo</label>
-                    </div> 
+                    
             </div>
           </div>
           <div className={stil.Input}>  
@@ -127,6 +127,7 @@ const Unos = () => {
               <input 
               // className={stil.OdabirUnos}
               type="date"
+              id="pregled"
               name="pregled"
               value={podaci.pregled} 
               onChange={UnosVrijednosti}

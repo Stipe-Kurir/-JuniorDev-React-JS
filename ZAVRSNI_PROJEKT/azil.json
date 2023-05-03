@@ -42,22 +42,62 @@
     {
       "id": 1,
       "ime": "Garfield",
-      "vrsta": "mačka",
+      "vrsta": "Mačka",
       "cip": false,
       "godine": 44,
       "opis": "Voli lazanje",
       "pregled": "2022-09-23",
-      "udomljen": true
+      "udomljen": "udomljen"
     },
     {
       "id": 2,
       "ime": "Snoopy",
-      "vrsta": "pas",
+      "vrsta": "Pas",
       "cip": true,
-      "godine": 50,
+      "godine": 40,
       "opis": "Više od običnog psa",
       "pregled": "2000-02-13",
-      "udomljen": false
+      "udomljen": "nije udomljen"
+    },
+    {
+      "ime": "adas",
+      "vrsta": "Pas",
+      "cip": false,
+      "godine": "22",
+      "opis": "sda",
+      "pregled": "0222-02-22",
+      "udomljen": "udomljen",
+      "id": 3
+    },
+    {
+      "ime": "sda",
+      "vrsta": "Ostalo",
+      "cip": true,
+      "godine": "22",
+      "opis": "sadda",
+      "pregled": "3333-03-31",
+      "udomljen": "nije udomljen",
+      "id": 4
+    },
+    {
+      "ime": "novo",
+      "vrsta": "Pas",
+      "cip": true,
+      "godine": "222",
+      "opis": "da da da",
+      "pregled": "3333-03-31",
+      "udomljen": "nije udomljen",
+      "id": 5
+    },
+    {
+      "ime": "sdads",
+      "vrsta": "Mačka",
+      "cip": true,
+      "godine": "22",
+      "opis": "dsa",
+      "pregled": "0002-02-22",
+      "udomljen": "nije udomljen",
+      "id": 6
     }
   ]
 }
