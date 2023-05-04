@@ -2,7 +2,6 @@ import React, { useContext ,useState,useEffect} from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import stil from './popis.module.css'
 import Footer from '../../components/Footer/Footer'
-import UserContext from '../../components/Context/UserContext'
 import Radio from '../../components/Radio/Radio'
 import PopisElement from '../../components/PopisElement/PopisElement'
 import axios from "axios";
@@ -10,14 +9,11 @@ import axios from "axios";
 const Popis = () => {
 
 
-  
 
 const [filterStatus,postaviFilterStatus]=useState("");
 const [filterVrsta,postaviFilterVrsta]=useState("Sve");
-
-
 const [podaci,postaviPodatke]=useState([])
-
+const [uredi,postaviUredi]=useState(false)
 
 useEffect(() => {
   axios
@@ -26,17 +22,28 @@ useEffect(() => {
 }, []);
 
 
+// console.log("ZIVOTINJE_ID:",podaci)
+// console.log("PODATAK_ID1",podatak)
+
 // console.log("FILTER VRSTA",filterVrsta)
 // console.log("FILTER STATUS",filterStatus)
 
-//RADI SAMO NAMISTI ZA UDOMLNJENE
- async function handleUredi(){
 
-  
-  await axios.patch(`http://localhost:3001/zivotinje/2`,{"godine":40});
- 
-  
+//RADI SAMO NAMISTI ZA UDOMLNJENE
+ async function handleUdomi(vrijednost){
+  // console.log("PODATAK2_ID",vrijednost)
+  await axios.patch(`http://localhost:3001/zivotinje/${vrijednost}`,{"udomljen":"udomljen"});
+  const rez=await axios.get("http://localhost:3001/zivotinje");
+  postaviPodatke(rez.data)
  }
+
+ //FUNKCIJA ZA UREDI
+const handleUredi=()=>{
+  postaviUredi(!uredi)
+ }
+
+
+
 
 
   return (
@@ -49,8 +56,10 @@ useEffect(() => {
 
           <div className={stil.Popis}>
 
+
             <div className={stil.PopisFilter}>
               <div className={stil.PopisFilterSticky}>
+
                 <div className={stil.FilterElement}>
                   <div className={stil.FilterNaslov}>VRSTA:</div>
 
@@ -60,6 +69,7 @@ useEffect(() => {
                   <Radio filter={filterVrsta}   postaviFilter={postaviFilterVrsta} vr={"Mačka"} />
                   </div>
                 </div>
+
                 <div className={stil.FilterElement}>
                   <div className={stil.FilterNaslov}>STATUS:</div>
                   <div className={stil.FilterRadioElm}>
@@ -88,8 +98,8 @@ useEffect(() => {
                   <PopisElement 
                   key={rez.id}
                   podaci={rez}  
-                  // funk={handleUredi}
-                 
+                  funk={handleUdomi}
+                  postaviPodatke={postaviPodatke}
                   />
                   )
                  }
@@ -103,7 +113,8 @@ useEffect(() => {
                   <PopisElement 
                   key={rez.id}
                   podaci={rez}  
-                  // funk={handleUredi}
+                  funk={handleUdomi}
+                  postaviPodatke={postaviPodatke}
                   />
                   )
                  }

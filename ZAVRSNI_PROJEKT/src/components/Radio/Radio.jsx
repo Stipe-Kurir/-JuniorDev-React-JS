@@ -8,8 +8,8 @@ const Radio = ({filter ,postaviFilter, vr}) => {
         postaviFilter(e.target.value)
       }
     
-      console.log("UDOMLJENO PROVJERA:",vr);
-      console.log("FILTER PROVJERA:",filter)
+      // console.log("UDOMLJENO PROVJERA:",vr);
+      // console.log("FILTER PROVJERA:",filter)
 
   return (
     <div className={stil.RadioElm}>

@@ -2,20 +2,6 @@
   "Odabir": [
     {
       "odabrano": {
-        "odjeća": "Hlače",
-        "velicina": "S",
-        "slika": "./trousers.png",
-        "boja": "#00ff40"
-      },
-      "dodatno": {
-        "datum_kupnje": "2222-02-22",
-        "ducan_kupnje": "22",
-        "cijena_kupnje": "22"
-      },
-      "id": 19
-    },
-    {
-      "odabrano": {
         "odjeća": "Majice",
         "velicina": "M",
         "slika": "./t-shirt.png",
@@ -55,6 +41,146 @@
         "cijena_kupnje": "22.03"
       },
       "id": 32
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 33
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 34
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 35
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 36
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 37
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 38
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 39
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 40
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 41
+    },
+    {
+      "odabrano": {
+        "odjeća": "Hlače",
+        "velicina": "M",
+        "slika": "./trousers.png",
+        "boja": "#0000ff"
+      },
+      "dodatno": {
+        "datum_kupnje": "2222-02-22",
+        "ducan_kupnje": "fsdfas",
+        "cijena_kupnje": "22"
+      },
+      "id": 42
     }
   ],
   "Velicine": [

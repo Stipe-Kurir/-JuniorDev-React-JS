@@ -20,7 +20,7 @@ const {context,setContext}=useContext(UserContext);
     const promjeniContext=(e)=>{
         setContext(e.target.value)
     }
-    console.log(context);
+    // console.log(context);
 
   return (
     <div className={stil.NavContainer}>

@@ -98,7 +98,7 @@ const Unos = () => {
             <div className={stil.label}>VRSTA:</div>
             <div className={stil.radioElements}>
                     <div className={stil.element}>
-                      <input className={stil.radioElm} type="radio" id="vrsta" name="element"  value="Ostalo" onChange={UnosVrijednosti}  required />
+                      <input className={stil.radioElm} type="radio" id="vrsta" name="element"  value="Ostalo" checked={podaci.vrsta==="Ostalo"} onChange={UnosVrijednosti}  required />
                       <label className={stil.radioLabel} htmlFor="Ostalo">Ostalo</label>
                     </div> 
                     <div className={stil.element}>
@@ -119,7 +119,7 @@ const Unos = () => {
           <div className={stil.Input}>  
                 <label className={stil.label} htmlFor="opis">OPIS:</label>
                 <div className={stil.InputBar}>
-                <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={podaci.opis} onChange={UnosVrijednosti}  required/>
+                <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={podaci.opis} onChange={UnosVrijednosti}  />
                 </div>
           </div>
           <div className={stil.Input}> 
