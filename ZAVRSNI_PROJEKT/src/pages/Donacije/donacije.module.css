@@ -1,6 +1,52 @@
 .DonacijeContainer{
     width:1400px;
-    height:800px;
     background-color: blueviolet;
     margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid black;
+}
+
+.DonacijaForma
+{
+    width:100%;
+    height:400px;
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.DonacijaKategorija
+{
+    width:100%;
+    background-color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.DonacijaKategorijaNaslov
+{
+    width:95%;
+    background-color: aquamarine;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    font-size: 30px;
+    font-family: Garamond, serif;
+}
+
+.DonacijaBotun
+{
+    padding:20px 20px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 10px 0px;
 }

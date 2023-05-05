@@ -13,30 +13,9 @@
       "datum": "17/2/2023",
       "tekst": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
       "vazno": false
-    },
-    {
-      "naslov": "dssdda",
-      "datum": "4/5/2023",
-      "tekst": "dsadssafasffa",
-      "vazno": true,
-      "id": 3
-    },
-    {
-      "naslov": "dsaada",
-      "datum": "4/5/2023",
-      "tekst": "fsaasfsafsaf",
-      "vazno": false,
-      "id": 4
     }
   ],
   "donacije": [
-    {
-      "id": 1,
-      "kategorija": "donirano",
-      "tip": "Hrana",
-      "vrijednost": 25,
-      "opis": "Suha hrana za pse - 10kg"
-    },
     {
       "id": 2,
       "kategorija": "trazi",
@@ -45,11 +24,32 @@
       "opis": "Grebalica za mačke"
     },
     {
-      "id": 3,
+      "kategorija": "donirano",
+      "tip": "Igračke",
+      "vrijednost": "10",
+      "opis": "igračka za pse",
+      "id": 4
+    },
+    {
+      "kategorija": "donirano",
+      "tip": "Hrana",
+      "vrijednost": "22",
+      "opis": "22",
+      "id": 5
+    },
+    {
+      "kategorija": "trazi",
+      "tip": "Hrana",
+      "vrijednost": "22",
+      "opis": "22",
+      "id": 7
+    },
+    {
       "kategorija": "nudi",
       "tip": "Ostalo",
-      "vrijednost": 25,
-      "opis": "Kavez za srednje papige"
+      "vrijednost": "77",
+      "opis": "77",
+      "id": 8
     }
   ],
   "zivotinje": [

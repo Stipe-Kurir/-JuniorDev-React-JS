@@ -1,0 +1,38 @@
+.formaDonacija
+{
+    width:30%;
+    height:80%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.donacijaNaslov{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: Garamond, serif;
+}
+
+.PodaciElm{
+    width:95%;
+    padding: 10px 0px;
+    background-color: rgb(198, 245, 43);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.BotunUrediStil
+{
+    padding:10px 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-top: 10px;
+}
