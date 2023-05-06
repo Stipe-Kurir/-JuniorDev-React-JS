@@ -61,7 +61,8 @@
       "godine": 44,
       "opis": "Voli lazanje",
       "pregled": "2022-09-23",
-      "udomljen": "udomljen"
+      "udomljen": "udomljen",
+      "slika": "https://www.kucni-ljubimci.com/wp-content/uploads/2017/05/10-zanimljivih-cinjenica-o-mackama-1.jpg"
     },
     {
       "id": 2,
@@ -71,37 +72,30 @@
       "godine": 40,
       "opis": "Više od običnog psa",
       "pregled": "2000-02-13",
-      "udomljen": "udomljen"
+      "udomljen": "udomljen",
+      "slika": "https://imengine.prod.srp.navigacloud.com/?uuid=c81b4759-003b-55f4-bd03-c1d14729106e&type=primary&q=72&width=886"
     },
     {
-      "ime": "afasf",
+      "ime": "das",
       "vrsta": "Pas",
       "cip": true,
-      "godine": "5",
-      "opis": "5",
-      "pregled": "5555-05-05",
-      "udomljen": "nije udomljen",
-      "id": 3
-    },
-    {
-      "ime": "dsds",
-      "vrsta": "Mačka",
-      "cip": false,
       "godine": "22",
-      "opis": "asdasdsd asnda  da fl as flasj lasj flsaj faj lfajl fajfj asjl fjasf jsafj lksjf sj fsj fsjfsj fsfls",
-      "pregled": "0022-02-22",
-      "udomljen": "nije udomljen",
-      "id": 5
-    },
-    {
-      "ime": "dsasd",
-      "vrsta": "Pas",
-      "cip": true,
-      "godine": "12",
-      "opis": "uređivano",
+      "opis": "dsads",
       "pregled": "2222-02-22",
       "udomljen": "nije udomljen",
-      "id": 6
+      "slika": "https://slika.nezavisne.rs/2014/03/750x450/20140312170637_235118.jpg",
+      "id": 8
+    },
+    {
+      "ime": "sadad",
+      "vrsta": "Mačka",
+      "cip": true,
+      "godine": "22",
+      "opis": "dsad",
+      "pregled": "2222-02-22",
+      "udomljen": "nije udomljen",
+      "slika": "https://d19p4plxg0u3gz.cloudfront.net/eb8a1730-35a7-11eb-b233-0242ac120025/original",
+      "id": 9
     }
   ]
 }

@@ -1,31 +1,25 @@
 .PopisContainer{
     width:1400px;
-    height:800px; 
+    height:800px;
     background-color: rgb(100, 201, 146);
     margin-top: 180px; 
     border: 3px solid black;
-}
-
-.Popis{
-    width:100%;
-    height:100%;
-    background-color: aqua;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
 
 .PopisFilter{
-    width:20%;
-    height:100%;
+    width:280px;
+    height:400px;
     background-color: aquamarine;
-    
+    position: fixed;
+    top:200px; 
+    border-radius: 10px;
 }
+
 .PopisFilterSticky{
     width:100%;
     height:500px;
-    position: sticky;
-    top:200px;
-    background-color: antiquewhite;
     display: flex;
     flex-direction: column; 
 }
@@ -33,38 +27,34 @@
 .FilterElement{
     width:100%;
     height:200px;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
-  
 }
 
 .FilterNaslov{
-    width: 100%;
-    /* background-color: rgb(127, 189, 255); */
-    padding: 10px 0px;
+    width: 95%;
+    padding-top: 10px;
     font-size: 25px;
-    margin-left: 20px;
+    font-weight: bold;
 }
 
 .FilterRadioElm{
-    width: 100%;
-     margin-left: 50px; 
-    /* background-color: rgb(127, 255, 221); */
+    width: 90%;
+    margin-left: 10px; 
 }
 
 .PopisPrikaz{
     width:80%;
-    height:100%;
-    background-color: rgb(127, 170, 255);
+    height: 100%;
+    /* background-color: rgb(127, 170, 255); */
+    margin-left: 280px;
     overflow: scroll;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .PopisPrikazElementi
 {
     width:100%;
-    background-color: rgb(248, 180, 92);
     display: flex;
     flex-direction: column;
     justify-content: center;

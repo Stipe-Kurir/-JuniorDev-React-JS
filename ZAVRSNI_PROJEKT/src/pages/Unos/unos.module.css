@@ -14,40 +14,46 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .UnosAdminNaslov{
-    width:50%;
+    width:40%;
     padding:25px 0px;
-    background-color: antiquewhite;
+    background-color: antiquewhite; 
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Garamond, serif;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 5px  5px 0px 0px;
     
 }
 .UnosAdminForm{
-    width:50%;
-    height: 80%;
-    background-color: aquamarine;
+    width:40%;
+    height: 85%;
+    background-color: aquamarine; 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:10px;
+    border-radius: 0px 0px 5px  5px ;
 }
 
 
 .Input{
     width:100%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap:5px;
+    
 }
+
+
 .Check{
     width:100%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -67,9 +73,8 @@
 .label{
     width:80%;
     margin-left: 20px;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     font-size: 20px;
-    font-family: Garamond, serif;
     font-weight: bold;
 
     
@@ -78,12 +83,33 @@
 {
     width:80%;
     margin-left: 20px;
-    background-color: rgb(237, 100, 189);
+    /* background-color: rgb(237, 100, 189); */
 }
  .input{
     width:50%;
     height:20px;
+    outline:none;
+    border: 1px solid black;
 } 
+.inputArea{
+    width:50%;
+    outline:none;
+    border: 1px solid black;
+} 
+.inputGodine
+{
+    width:25%;
+    height:20px;
+    outline:none;
+    border: 1px solid black;
+}
+.inputDatum
+{
+    width:25%;
+    height:20px;
+    outline:none;
+    border: 1px solid black; 
+}
 
 .Vrsta{
     width:100%;
@@ -95,7 +121,7 @@
 .radioElements
 {
     width:80%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: flex;
     flex-direction: row;
     gap:10px;

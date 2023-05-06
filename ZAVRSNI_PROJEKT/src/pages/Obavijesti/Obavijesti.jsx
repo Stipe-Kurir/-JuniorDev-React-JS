@@ -70,6 +70,8 @@ const DodajObavijest=()=>{
     postaviBotun(!botun);
 }
 
+
+
 const UnesiObavijest=(e)=>{
   e.preventDefault();
   const ObradeniPodaci=obradiPodatke(podaci);
@@ -115,17 +117,18 @@ useEffect(() => {
        
        <div className={stil.ObavijestiContainer}>
         <div className={stil.UnosObavijesti}>
-          <div className={stil.UnosBotun}>
+          {/* <div className={stil.UnosBotun}>
   
             <button className={stil.BotunObavijest} onClick={DodajObavijest}>Nova obavijest</button>
-          </div>
+          </div> */}
           <div className={stil.ObavijestiForma}>
 
-            {botun ? 
+          {botun ? 
+           <div className={stil.ObavijestiForma}>
 
               <div className={stil.NovaObavijest}>
 
-                <div className={stil.NovaObavijestNaslov}>Unosite novu obavijest</div>
+                <div className={stil.NovaObavijestNaslov}>Unesite novu obavijest</div>
 
                 
                    { korisnik.context === "admin" ?
@@ -136,14 +139,14 @@ useEffect(() => {
                           <div className={stil.Opis}>
                             <label htmlFor="naslov">NASLOV:</label> 
                           </div>
-                          <input type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
+                          <input className={stil.inputArea} type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
                         </div>
 
                         <div className={stil.Input}>
                           <div className={stil.Opis}>
                             <label htmlFor="tekst">TEKST:</label> 
                           </div>
-                          <input type="text" id="tekst" name="tekst" minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti}  required/>
+                          <textarea className={stil.inputArea}  type="text" id="tekst" name="tekst"  minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti} required></textarea>
                         </div>
 
                       <div className={stil.NovaObavijestPotvrda}>
@@ -169,14 +172,14 @@ useEffect(() => {
                           <div className={stil.Opis}>
                             <label htmlFor="naslov">NASLOV:</label> 
                           </div>
-                          <input type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
+                          <input className={stil.inputArea} type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
                         </div>
 
                         <div className={stil.Input}>
                           <div className={stil.Opis}>
                             <label htmlFor="tekst">TEKST:</label> 
                           </div>
-                          <input type="text" id="tekst" name="tekst" minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti}  required/>
+                          <textarea className={stil.inputArea}  type="text" id="tekst" name="tekst"  minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti} required></textarea>
                         </div>
 
                         <div className={stil.NovaObavijestPotvrda}>
@@ -190,8 +193,14 @@ useEffect(() => {
                    } 
                            
               </div>
+              </div>
                : 
-               <div></div>}
+               <div className={stil.UnosBotun}>
+  
+               <button className={stil.BotunObavijest} onClick={DodajObavijest}>Unesite novu obavijest</button>
+             </div>
+          }
+
           </div>
         </div>
       

@@ -71,8 +71,8 @@ const FormaUredi = ({podaci,postaviPodatke,funk}) => {
 
   return (
     <form className={stil.Podaci} onSubmit={Spremi}>
-          <div className={stil.PodaciElm}>IMEF: {promjenjeno.ime}</div>
-          <div className={stil.PodaciElm}>VRSTAF: {promjenjeno.vrsta}</div>
+          <div className={stil.PodaciElm}>IME: {promjenjeno.ime}</div>
+          <div className={stil.PodaciElm}>VRSTA: {promjenjeno.vrsta}</div>
 
           <div className={stil.PodaciElm}>
             UDOMLJEN: 

@@ -22,7 +22,9 @@ const PopisElement = ({podaci,funk,postaviPodatke}) => {
 
   return (
     <div className={podaci.udomljen==="udomljen" ? stil.PopisElement : stil.PopisElementNijeUdomljen}>
-        <div className={stil.Slika}>Slika</div>
+        <div className={stil.Slika}>
+          <img className={stil.SlikaElm} src={podaci.slika} alt="slika_zivotinje" />
+        </div>
   
     {korisnik.context==="admin"?
 

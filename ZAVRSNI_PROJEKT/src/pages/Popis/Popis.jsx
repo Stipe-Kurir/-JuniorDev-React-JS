@@ -13,7 +13,6 @@ const Popis = () => {
 const [filterStatus,postaviFilterStatus]=useState("");
 const [filterVrsta,postaviFilterVrsta]=useState("Sve");
 const [podaci,postaviPodatke]=useState([])
-const [uredi,postaviUredi]=useState(false)
 
 useEffect(() => {
   axios
@@ -31,20 +30,13 @@ useEffect(() => {
 
 //RADI SAMO NAMISTI ZA UDOMLNJENE
  async function handleUdomi(vrijednost){
-  // console.log("PODATAK2_ID",vrijednost)
   await axios.patch(`http://localhost:3001/zivotinje/${vrijednost}`,{"udomljen":"udomljen"});
   const rez=await axios.get("http://localhost:3001/zivotinje");
   postaviPodatke(rez.data)
  }
 
- //FUNKCIJA ZA UREDI
-const handleUredi=()=>{
-  postaviUredi(!uredi)
- }
 
-
-
-
+ 
 
   return (
 
@@ -53,8 +45,6 @@ const handleUredi=()=>{
        <Navbar />
 
         <div className={stil.PopisContainer}>
-
-          <div className={stil.Popis}>
 
 
             <div className={stil.PopisFilter}>
@@ -74,12 +64,8 @@ const handleUredi=()=>{
                   <div className={stil.FilterNaslov}>STATUS:</div>
                   <div className={stil.FilterRadioElm}>
                   <Radio filter={filterStatus}  postaviFilter={postaviFilterStatus} vr={""} />
-                  {/* NEŠTO NE RADI PROVJERI ZAŠTO 
-                  <Radio filter={filterStatus}  postaviFilter={postaviFilterStatus} vr={"udomljen"} /> 
-                  */}
+                  
                   <Radio filter={filterStatus}  postaviFilter={postaviFilterStatus}  vr={"nije udomljen"} />
-                  
-                  
                   
                   </div>
                 </div>
@@ -123,7 +109,7 @@ const handleUredi=()=>{
                 
               </div>
             </div>
-          </div>
+       
 
       </div>
       

@@ -17,6 +17,7 @@ const Unos = () => {
     godine:"",
     opis:"",
     pregled:"",
+    slika:""
   })
 
   const zadano={
@@ -26,6 +27,7 @@ const Unos = () => {
     godine:"",
     opis:"",
     pregled:"",
+    slika:""
   }
 
   const vratiZadano=()=>{
@@ -42,7 +44,8 @@ const Unos = () => {
       "godine":objekt.godine,
       "opis":objekt.opis,
       "pregled":objekt.pregled,
-      "udomljen":"nije udomljen"
+      "udomljen":"nije udomljen",
+      "slika":objekt.slika
     }
   }
 
@@ -52,14 +55,11 @@ const Unos = () => {
     postaviPodatke({...podaci,[id]:value})
   }
 
-  
 
   const UnesiZivotinju=(e)=>{
     e.preventDefault();
     const ObradeniPodaci=obradiPodatke(podaci);
-  
     axios.post("http://localhost:3001/zivotinje", ObradeniPodaci)
-
     vratiZadano()
    
   }
@@ -75,7 +75,6 @@ const Unos = () => {
   
   }
 
- 
 
 
   return (
@@ -113,19 +112,30 @@ const Unos = () => {
             </div>
           </div>
           <div className={stil.Input}>  
-                <label  htmlFor="godine">GODINE:</label>
-                <input type="number" id="godine" name="godine" min={0} value={podaci.godine} onChange={UnosVrijednosti}  required/>
+                <label className={stil.label} htmlFor="godine">GODINE:</label>
+                <div className={stil.InputBar}>
+                <input className={stil.inputGodine} type="number" id="godine" name="godine" min={0} value={podaci.godine} onChange={UnosVrijednosti}  required/>
+                </div>
           </div>
           <div className={stil.Input}>  
                 <label className={stil.label} htmlFor="opis">OPIS:</label>
                 <div className={stil.InputBar}>
-                <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={podaci.opis} onChange={UnosVrijednosti}  />
+                  <textarea className={stil.inputArea}  type="text" id="opis" name="opis"  maxLength="100" value={podaci.opis} onChange={UnosVrijednosti} ></textarea>
                 </div>
           </div>
+          <div className={stil.Input}>  
+                <label className={stil.label} htmlFor="slika">SLIKA(url):</label>
+                <div className={stil.InputBar}>
+                <input className={stil.input} type="text" id="slika" name="slika"  maxLength="100" value={podaci.slika} onChange={UnosVrijednosti}  />
+                </div>
+          </div>
+
           <div className={stil.Input}> 
-            <label  htmlFor="pregled">UNESITE DATUM PREGLEDA:</label>
-              <input 
-              // className={stil.OdabirUnos}
+            <label  className={stil.label}  htmlFor="pregled">UNESITE DATUM PREGLEDA:</label>
+              
+            <div className={stil.InputBar}>
+            <input 
+              className={stil.inputDatum}
               type="date"
               id="pregled"
               name="pregled"
@@ -133,6 +143,8 @@ const Unos = () => {
               onChange={UnosVrijednosti}
               required>
               </input>
+                </div>
+             
         </div>
         <div className={stil.Check}>
             <input className={stil.CheckBox} type="checkbox" onChange={UnosCheck} id="cip"  value={podaci.cip} checked={podaci.cip===true}

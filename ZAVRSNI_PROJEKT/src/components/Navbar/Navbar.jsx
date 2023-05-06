@@ -3,6 +3,8 @@ import stil from "./navbar.module.css"
 import UserContext from '../Context/UserContext'
 import { useContext } from 'react'
 import {NavLink} from "react-router-dom"
+import {Switch} from "antd"
+import { useState } from 'react'
 
 const Navbar = () => {
 
@@ -17,28 +19,43 @@ const navigationAdmin=[
 
 const {context,setContext}=useContext(UserContext);
 
-    const promjeniContext=(e)=>{
-        setContext(e.target.value)
+
+
+
+const promjeniToggle=()=>{
+    if(context==="admin")
+    {
+        setContext("korisnik")
     }
-    // console.log(context);
+    
+    else
+    {
+        setContext("admin")
+    }
+    
+}
+
 
   return (
     <div className={stil.NavContainer}>
         <div className={stil.NavNaslov}>
             <div className={stil.naslov}>
-                AZIL ZA ŽIVOTINJE
+                <div className={stil.TekstNaslov}>AZIL ZA ŽIVOTINJE</div>
+                <div className={stil.LogoNaslov}><img src="pet-house.png" height="60px" width="60px"/></div>
             </div>
             <div className={stil.korisnik}>
-                <div>
-                    <input type="radio"  name="user" value="admin" defaultChecked={context==="admin"} onChange={promjeniContext}/>
-                    <label htmlFor="admin">Admin</label>
-                </div>
 
-                <div>
-                    <input type="radio"  name="user" value="korisnik" defaultChecked={context==="korisnik"} onChange={promjeniContext}/>
-                    <label htmlFor="korisnik">Korisnik</label>
-                </div>
-                
+                {context==="admin" ?
+                <>
+                 <span>ADMIN</span>
+                 <Switch  style={{ background: "green",  }} onClick={promjeniToggle}  />
+                 </> : 
+                 <>
+                 <span>KORISNIK</span>
+                <Switch  style={{ background: "aqua",  }} onClick={promjeniToggle} checked={context==="korisnik"} />
+                </>
+                }
+
             </div>
         </div>
       
@@ -51,11 +68,11 @@ const {context,setContext}=useContext(UserContext);
                 //destrukturira si da ti samo vrati isActive
                 className={({isActive})=>{
                     return stil.Opcija ,
-                    (isActive ? stil.OpcijaAktivna:
+                    (isActive ? stil.OpcijaAktivna :
                         stil.Opcija)  
                 }}
                 >
-                    {item.name}
+                    <span>{item.name}</span>
                 </NavLink>
             ))
 
@@ -70,3 +87,15 @@ const {context,setContext}=useContext(UserContext);
 
 export default Navbar
 
+
+//OVO TI JE BILO U stil.korisnik -->navbar
+
+   {/* <div>
+                    <input type="radio"  name="user" value="admin" defaultChecked={context==="admin"} onChange={promjeniContext}/>
+                    <label htmlFor="admin">Admin</label>
+                </div>
+
+                <div>
+                    <input type="radio"  name="user" value="korisnik" defaultChecked={context==="korisnik"} onChange={promjeniContext}/>
+                    <label htmlFor="korisnik">Korisnik</label>
+                </div> */}
