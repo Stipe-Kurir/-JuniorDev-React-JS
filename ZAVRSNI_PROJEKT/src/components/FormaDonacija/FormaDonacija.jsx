@@ -74,7 +74,7 @@ const FormaDonacija = ({funk,postaviDonacije}) => {
   return (
     <form className={stil.formaDonacija} onSubmit={UnesiDonaciju}>
         <div className={stil.donacijaNaslov}>UNESITE NOVU DONACIJU</div>
-        <div className={stil.PodaciElm}>Tip: 
+        <div className={stil.PodaciElm}><b>Tip: </b>
             <input className={stil.RadioBtn} type="radio"  name="tip" value={"Ostalo"}  onChange={unosVrijednosti}  required />
             <label htmlFor="tip">Ostalo</label>
 
@@ -88,11 +88,11 @@ const FormaDonacija = ({funk,postaviDonacije}) => {
             <label htmlFor="tip">Lijekovi</label>
         
         </div>
-        <div className={stil.PodaciElm}>Vrijednost:
-        <input type="number"  name="vrijednost" min={0} value={podaci.vrijednost} onChange={unosVrijednosti}   required/> 
+        <div className={stil.PodaciElm}><b>Vrijednost: </b>
+        <input className={stil.inputVr} type="number"  name="vrijednost" min={0} value={podaci.vrijednost} onChange={unosVrijednosti}   required/> 
         </div>
-        <div className={stil.PodaciElm}>Opis:
-        <input className={stil.input} type="text"  name="opis" value={podaci.opis} onChange={unosVrijednosti}   maxLength="100"  />
+        <div className={stil.PodaciElm}><b>Opis: </b>
+          <input className={stil.input} type="text"  name="opis" value={podaci.opis} onChange={unosVrijednosti}   maxLength="100"  /> 
         </div>
       <button className={stil.BotunUrediStil} type="submit">DODAJ</button>
     </form>

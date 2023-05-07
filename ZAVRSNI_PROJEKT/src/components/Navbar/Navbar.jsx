@@ -4,7 +4,7 @@ import UserContext from '../Context/UserContext'
 import { useContext } from 'react'
 import {NavLink} from "react-router-dom"
 import {Switch} from "antd"
-import { useState } from 'react'
+
 
 const Navbar = () => {
 
@@ -47,12 +47,12 @@ const promjeniToggle=()=>{
 
                 {context==="admin" ?
                 <>
-                 <span>ADMIN</span>
-                 <Switch  style={{ background: "green",  }} onClick={promjeniToggle}  />
+                 <span style={{ color: "yellow"  }}>ADMIN</span>
+                 <Switch  style={{ background: "yellow",  }} onClick={promjeniToggle}  />
                  </> : 
                  <>
-                 <span>KORISNIK</span>
-                <Switch  style={{ background: "aqua",  }} onClick={promjeniToggle} checked={context==="korisnik"} />
+                 <span style={{ color: " rgb(100, 201, 146)"  }}>KORISNIK</span>
+                <Switch  style={{ background: " rgb(100, 201, 146)"  }} onClick={promjeniToggle} checked={context==="korisnik"} />
                 </>
                 }
 

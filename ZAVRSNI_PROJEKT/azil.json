@@ -31,25 +31,32 @@
       "id": 4
     },
     {
-      "kategorija": "donirano",
+      "kategorija": "trazi",
       "tip": "Hrana",
       "vrijednost": "22",
       "opis": "22",
       "id": 5
     },
     {
-      "kategorija": "trazi",
+      "kategorija": "donirano",
       "tip": "Hrana",
       "vrijednost": "22",
       "opis": "22",
       "id": 7
     },
     {
-      "kategorija": "nudi",
+      "kategorija": "donirano",
       "tip": "Ostalo",
       "vrijednost": "77",
       "opis": "77",
       "id": 8
+    },
+    {
+      "kategorija": "nudi",
+      "tip": "Hrana",
+      "vrijednost": "22",
+      "opis": "sdad fa  afsf af aaf fa ",
+      "id": 10
     }
   ],
   "zivotinje": [
@@ -96,6 +103,17 @@
       "udomljen": "nije udomljen",
       "slika": "https://d19p4plxg0u3gz.cloudfront.net/eb8a1730-35a7-11eb-b233-0242ac120025/original",
       "id": 9
+    },
+    {
+      "ime": "daads",
+      "vrsta": "Pas",
+      "cip": true,
+      "godine": "22",
+      "opis": "asfasffsa",
+      "pregled": "2222-02-22",
+      "udomljen": "nije udomljen",
+      "slika": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBVBGQpM-a3S6sCn-zDaQO45oe0nPGz986fyli_eV&s",
+      "id": 10
     }
   ]
 }

@@ -1,17 +1,18 @@
 .PopisContainer{
     width:1400px;
     height:800px;
-    background-color: rgb(100, 201, 146);
+    background-color: rgb(13, 176, 87);
     margin-top: 180px; 
     border: 3px solid black;
     display: flex;
     flex-direction: row; 
+    border-top: none; 
 }
 
 .PopisFilter{
     width:280px;
     height:400px;
-    background-color: aquamarine;
+    background-color: yellow;
     position: fixed;
     top:200px; 
     border-radius: 10px;

@@ -63,28 +63,37 @@ async function handlePonovi(){
   console.log("DONACIJE U ELEMENTU",donacije)
   return (
     <div className={stil.DonacijaPrikaz}>
+
       <div className={stil.DonacijaElementi}>
-        <div className={stil.DonacijaEl}>TIP: {donacije.tip}</div>
-        <div className={stil.DonacijaEl}>VRIJEDNOST: {donacije.vrijednost}</div>
-        <div className={stil.DonacijaEl}>OPIS: {donacije.opis}</div>
+        <div className={stil.DonacijaEl}><b>TIP:</b> {donacije.tip}</div>
+        <div className={stil.DonacijaEl}><b>VRIJEDNOST:</b> {donacije.vrijednost} €</div>
+        <div className={stil.DonacijaEl}>OPIS:{donacije.opis}</div>
       </div>
-      <div className={stil.DonacijaElementiBotuni} >
+
+      <div className={stil.DonacijaElementiBotuni}>
+
       {
       filter==="trazi" && <div className={stil.DvaBotuna}>
-        <button className={stil.BotunStil} onClick={handleDonirano}>DONIRANO</button>
-        <button className={stil.BotunStil} onClick={handleIzbrisi}>IZBRIŠI</button>
-        </div>
-        }
+                            <button className={stil.BotunStil} onClick={handleDonirano}>DONIRANO</button>
+                            <button className={stil.BotunStil} onClick={handleIzbrisi}>IZBRIŠI</button>
+                          </div>
+      }
+
      {
      filter==="nudi" && <div className={stil.JedanBotun}>
-      <button className={stil.BotunStil} onClick={handleDonirano}>PRIHVATI</button>
+                           <button className={stil.BotunStil} onClick={handleDonirano}>PRIHVATI</button>
+                        </div>
+     }
+
+     {
+     filter==="donirano" && <div className={stil.DvaBotuna}>
+                              <button  className={stil.BotunStil} onClick={handlePonovi}>PONOVI</button>
+                              <button className={stil.BotunStil} onClick={handleIzbrisi}>IZBRIŠI</button>
+                             </div>
+     }
+
       </div>
-      }
-     {filter==="donirano" && <div className={stil.DvaBotuna}>
-      <button  className={stil.BotunStil} onClick={handlePonovi}>PONOVI</button>
-      <button className={stil.BotunStil} onClick={handleIzbrisi}>IZBRIŠI</button>
-      </div>}
-      </div>
+
      
     </div>
   )

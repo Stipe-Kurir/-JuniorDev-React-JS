@@ -2,7 +2,7 @@
     margin:20px;
     width:65%;
     height:500px;
-    background-color: rgb(0, 123, 255);
+    background-color: white;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@
     margin:20px;
     width:65%;
     height:500px;
-    background-color: rgb(66, 241, 151);
+    background-color: yellow;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,17 +42,19 @@
 .Podaci{
     width:50%;
     /* background-color: coral;  */
-    height:85%;
+    height:80%;
     display: flex;
     flex-direction: column;
     gap:10px;
+    margin-top: 20px;
 }
 
 .Botuni
 {
     width:100%;
-    background-color: aliceblue; 
+    background-color: black; 
     height:15%;
+    margin-bottom: 10px;
 }
 .BotunRaspored
 {

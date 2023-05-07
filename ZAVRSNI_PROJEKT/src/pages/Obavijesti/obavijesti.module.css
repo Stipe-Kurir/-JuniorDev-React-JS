@@ -1,6 +1,6 @@
 .ObavijestiContainer{
     width:1400px;
-    background-color: rgb(100, 201, 146);
+    background-color: rgb(13, 176, 87);
     margin-top: 180px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
 .UnosObavijesti{
     width:100%;
     height:350px;
-    background-color: rgb(166, 201, 100);
+    background-color: rgb(13, 176, 87);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,7 +45,7 @@
 .NovaObavijest{
     width:60%;
     height:90%;
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,8 +59,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
-    font-size: 20px;
+    background-color: yellow;
+    font-size: 25px;
     font-weight: bold;
     border-radius: 5px 5px 0px 0px;
     padding: 10px 0px;

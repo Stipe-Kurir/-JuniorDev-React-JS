@@ -1,9 +1,10 @@
 .UnosContainer{
     width:1400px;
     height:800px; 
-    background-color: rgb(100, 201, 146);
+    background-color: rgb(13, 176, 87);
     margin-top: 180px;
     border: 3px solid black;
+    border-top: none; 
 }
 
 .UnosAdmin{
@@ -18,7 +19,7 @@
 .UnosAdminNaslov{
     width:40%;
     padding:25px 0px;
-    background-color: antiquewhite; 
+    background-color: yellow; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +32,7 @@
 .UnosAdminForm{
     width:40%;
     height: 85%;
-    background-color: aquamarine; 
+    background-color:white; 
     display: flex;
     flex-direction: column;
     align-items: center;

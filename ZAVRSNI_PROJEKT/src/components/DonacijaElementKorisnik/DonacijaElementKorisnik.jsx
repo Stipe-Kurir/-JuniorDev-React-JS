@@ -20,8 +20,8 @@ const DonacijaElementKorisnik = ({donacije,postaviDonacije}) => {
   return (
     <div className={stil.DonacijaPrikaz}>
     <div className={stil.DonacijaElementi}>
-      <div className={stil.DonacijaEl}>TIP: {donacije.tip}</div>
-      <div className={stil.DonacijaEl}>VRIJEDNOST: {donacije.vrijednost}</div>
+      <div className={stil.DonacijaEl}><b>TIP:</b> {donacije.tip}</div>
+      <div className={stil.DonacijaEl}><b>VRIJEDNOST:</b> {donacije.vrijednost} €</div>
       <div className={stil.DonacijaEl}>OPIS: {donacije.opis}</div>
     </div>
     <div className={stil.DonacijaElementiBotuni} >
