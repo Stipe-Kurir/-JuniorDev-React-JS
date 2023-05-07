@@ -108,8 +108,6 @@ useEffect(() => {
 
 
 
-// console.log("OBAVIJESIT IZ BAZE",obavijesti)
-
   return (
     <div>
      
@@ -117,10 +115,7 @@ useEffect(() => {
        
        <div className={stil.ObavijestiContainer}>
         <div className={stil.UnosObavijesti}>
-          {/* <div className={stil.UnosBotun}>
-  
-            <button className={stil.BotunObavijest} onClick={DodajObavijest}>Nova obavijest</button>
-          </div> */}
+         
           <div className={stil.ObavijestiForma}>
 
           {botun ? 

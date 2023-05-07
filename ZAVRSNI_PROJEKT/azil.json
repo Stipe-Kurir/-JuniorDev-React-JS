@@ -57,6 +57,13 @@
       "vrijednost": "22",
       "opis": "sdad fa  afsf af aaf fa ",
       "id": 10
+    },
+    {
+      "kategorija": "trazi",
+      "tip": "Igračke",
+      "vrijednost": "22",
+      "opis": "saffsa faasf  saf fsa fas fsa fas asf fasafs f sa fa sfaf sf af sa afs fas fsa fsa saf fsafsafsafs f",
+      "id": 11
     }
   ],
   "zivotinje": [
@@ -111,9 +118,20 @@
       "godine": "22",
       "opis": "asfasffsa",
       "pregled": "2222-02-22",
-      "udomljen": "nije udomljen",
+      "udomljen": "udomljen",
       "slika": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBVBGQpM-a3S6sCn-zDaQO45oe0nPGz986fyli_eV&s",
       "id": 10
+    },
+    {
+      "ime": "22",
+      "vrsta": "Pas",
+      "cip": true,
+      "godine": "222",
+      "opis": "safasffsa\nfsaf\nsaf\ns\nfsa\nfsa\nfs\nfs\nfsa\nfas\nfsa\ngsa\ngsgsdaga\nsdg\ndg\ndsg\ndsgs\ng\ndsg\ng\ndsg\ndg\ndg\nsg\ndsg",
+      "pregled": "1111-11-11",
+      "udomljen": "nije udomljen",
+      "slika": "",
+      "id": 11
     }
   ]
 }

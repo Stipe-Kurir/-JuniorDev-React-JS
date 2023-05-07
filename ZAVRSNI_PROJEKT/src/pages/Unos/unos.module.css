@@ -10,7 +10,6 @@
 .UnosAdmin{
     width:100%;
     height:100%;
-    /* background-color: antiquewhite; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Garamond, serif;
+
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px  5px 0px 0px;
@@ -43,7 +42,6 @@
 
 .Input{
     width:100%;
-    /* background-color: antiquewhite; */
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -54,14 +52,13 @@
 
 .Check{
     width:100%;
-    /* background-color: antiquewhite; */
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     gap:5px;
     justify-content: center;
     font-size: 20px;
-    font-family: Garamond, serif;
+
     font-weight: bold;
     
 }
@@ -74,7 +71,6 @@
 .label{
     width:80%;
     margin-left: 20px;
-    /* background-color: cornflowerblue; */
     font-size: 20px;
     font-weight: bold;
 
@@ -84,7 +80,6 @@
 {
     width:80%;
     margin-left: 20px;
-    /* background-color: rgb(237, 100, 189); */
 }
  .input{
     width:50%;
@@ -122,7 +117,6 @@
 .radioElements
 {
     width:80%;
-    /* background-color: antiquewhite; */
     display: flex;
     flex-direction: row;
     gap:10px;
@@ -145,7 +139,6 @@
 .radioLabel
 {
     font-size: 20px;
-    font-family: Garamond, serif;
     
 }
 
@@ -161,7 +154,8 @@
 }
 
 .Spremi:hover{
-    background-color: rgb(67, 248, 151);
+    background-color: rgb(13, 176, 87);
+    transition: 0.2s;
 }
 
 
@@ -172,14 +166,12 @@
     justify-content: center;
     font-size: 30px;
     font-weight: bold;
-    font-family: Garamond, serif;
 }
 .UnosKorisnikTekst{
     padding:30px;
     font-size: 30px;
     font-weight: bold;
-    font-family: Garamond, serif;
-    border:2px solid aliceblue;
+    border:3px solid white;
     border-radius: 10px;
-    color: aliceblue;
+    color:white;
 }

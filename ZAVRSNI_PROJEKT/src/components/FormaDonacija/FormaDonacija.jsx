@@ -67,9 +67,6 @@ const FormaDonacija = ({funk,postaviDonacije}) => {
       
     }
        
-       
-    
-
 
   return (
     <form className={stil.formaDonacija} onSubmit={UnesiDonaciju}>

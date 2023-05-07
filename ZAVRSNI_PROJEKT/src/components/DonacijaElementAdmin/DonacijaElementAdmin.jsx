@@ -1,5 +1,5 @@
 import React from 'react'
-import stil from './donacijaElement.module.css'
+import stil from './donacijaElementAdmin.module.css'
 import {  useState} from 'react'
 import axios from 'axios'
 
@@ -35,22 +35,18 @@ const DonacijaElementAdmin = ({donacije,postaviDonacije}) => {
   }
 
   async function handleDonirano(){
-
-   await axios.patch(`http://localhost:3001/donacije/${donacije.id}`, {kategorija:"donirano"})
-    const rezultat= await axios.get("http://localhost:3001/donacije")
-    postaviDonacije(rezultat.data)
+          await axios.patch(`http://localhost:3001/donacije/${donacije.id}`, {kategorija:"donirano"})
+          const rezultat= await axios.get("http://localhost:3001/donacije")
+          postaviDonacije(rezultat.data)
 
   }
 
 async function handlePonovi(){
-
           await axios.patch(`http://localhost:3001/donacije/${donacije.id}`, {kategorija:"trazi"})
           const rezultat= await axios.get("http://localhost:3001/donacije")
           postaviDonacije(rezultat.data)
    
   }
-
-
 
 
   const [filter,postaviFilter]=useState(donacije.kategorija)
@@ -61,13 +57,14 @@ async function handlePonovi(){
 
   
   console.log("DONACIJE U ELEMENTU",donacije)
+
   return (
     <div className={stil.DonacijaPrikaz}>
 
       <div className={stil.DonacijaElementi}>
-        <div className={stil.DonacijaEl}><b>TIP:</b> {donacije.tip}</div>
-        <div className={stil.DonacijaEl}><b>VRIJEDNOST:</b> {donacije.vrijednost} €</div>
-        <div className={stil.DonacijaEl}>OPIS:{donacije.opis}</div>
+        <div className={stil.DonacijaEl}><b>TIP: </b>{donacije.tip}</div>
+        <div className={stil.DonacijaEl}><b>VRIJEDNOST: </b>{donacije.vrijednost} €</div>
+        <div className={stil.PodaciElmOpis}><b>OPIS: </b>{donacije.opis}</div>
       </div>
 
       <div className={stil.DonacijaElementiBotuni}>
@@ -75,7 +72,7 @@ async function handlePonovi(){
       {
       filter==="trazi" && <div className={stil.DvaBotuna}>
                             <button className={stil.BotunStil} onClick={handleDonirano}>DONIRANO</button>
-                            <button className={stil.BotunStil} onClick={handleIzbrisi}>IZBRIŠI</button>
+                            <button className={stil.BotunStilIzbrisi} onClick={handleIzbrisi}>IZBRIŠI</button>
                           </div>
       }
 
@@ -88,7 +85,7 @@ async function handlePonovi(){
      {
      filter==="donirano" && <div className={stil.DvaBotuna}>
                               <button  className={stil.BotunStil} onClick={handlePonovi}>PONOVI</button>
-                              <button className={stil.BotunStil} onClick={handleIzbrisi}>IZBRIŠI</button>
+                              <button className={stil.BotunStilIzbrisi} onClick={handleIzbrisi}>IZBRIŠI</button>
                              </div>
      }
 

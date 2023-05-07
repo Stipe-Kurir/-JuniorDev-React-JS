@@ -71,24 +71,24 @@ const FormaUredi = ({podaci,postaviPodatke,funk}) => {
 
   return (
     <form className={stil.Podaci} onSubmit={Spremi}>
-          <div className={stil.PodaciElm}>IME: {promjenjeno.ime}</div>
-          <div className={stil.PodaciElm}>VRSTA: {promjenjeno.vrsta}</div>
+          <div className={stil.PodaciElm}><b>IME:</b> {promjenjeno.ime}</div>
+          <div className={stil.PodaciElm}><b>VRSTA:</b> {promjenjeno.vrsta}</div>
 
           <div className={stil.PodaciElm}>
-            UDOMLJEN: 
+          <b>UDOMLJEN:</b>
             <input  type="checkbox" onChange={UnosCheckUdomljen} id="udomljen"  value={promjenjeno.udomljen} checked={promjenjeno.udomljen==="udomljen"}
               name="udomljen" />
           </div>
           <div className={stil.PodaciElm}>
-            ČIPIRAN: 
+          <b>ČIPIRAN:</b> 
             <input  type="checkbox" onChange={UnosCheckCip} id="cip"  value={promjenjeno.cip} checked={promjenjeno.cip===true}
               name="cip" />
             </div>
           <div className={stil.PodaciElm}>
-             GODINE:<input type="number" id="godine" name="godine" min={0} value={promjenjeno.godine} onChange={UnosVrijednosti} required/> 
+          <b>GODINE:</b><input className={stil.inputG} type="number" id="godine" name="godine" min={0} value={promjenjeno.godine} onChange={UnosVrijednosti} required/> 
             </div>
           <div className={stil.PodaciElm}>
-            ZADNJI PREGLED: 
+          <b>ZADNJI PREGLED:</b>
             <input 
               // className={stil.OdabirUnos}
               type="date"
@@ -100,7 +100,7 @@ const FormaUredi = ({podaci,postaviPodatke,funk}) => {
               </input>
             </div>
           <div className={stil.PodaciElmOpis}>
-            OPIS:  <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={promjenjeno.opis} onChange={UnosVrijednosti}  />
+          <b>OPIS:</b>  <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={promjenjeno.opis} onChange={UnosVrijednosti}  />
             </div>
 
           <button className={stil.BotunUrediStil} type="submit">SPREMI</button>

@@ -9,7 +9,6 @@ import axios from "axios";
 const Popis = () => {
 
 
-
 const [filterStatus,postaviFilterStatus]=useState("");
 const [filterVrsta,postaviFilterVrsta]=useState("Sve");
 const [podaci,postaviPodatke]=useState([])
@@ -21,22 +20,13 @@ useEffect(() => {
 }, []);
 
 
-// console.log("ZIVOTINJE_ID:",podaci)
-// console.log("PODATAK_ID1",podatak)
 
-// console.log("FILTER VRSTA",filterVrsta)
-// console.log("FILTER STATUS",filterStatus)
-
-
-//RADI SAMO NAMISTI ZA UDOMLNJENE
  async function handleUdomi(vrijednost){
   await axios.patch(`http://localhost:3001/zivotinje/${vrijednost}`,{"udomljen":"udomljen"});
   const rez=await axios.get("http://localhost:3001/zivotinje");
   postaviPodatke(rez.data)
  }
 
-
- 
 
   return (
 
@@ -64,7 +54,6 @@ useEffect(() => {
                   <div className={stil.FilterNaslov}>STATUS:</div>
                   <div className={stil.FilterRadioElm}>
                   <Radio filter={filterStatus}  postaviFilter={postaviFilterStatus} vr={""} />
-                  
                   <Radio filter={filterStatus}  postaviFilter={postaviFilterStatus}  vr={"nije udomljen"} />
                   
                   </div>

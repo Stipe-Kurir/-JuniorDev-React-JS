@@ -8,15 +8,13 @@ import FormaUredi from '../FormaUredi/FormaUredi'
 const PopisElement = ({podaci,funk,postaviPodatke}) => {
 
     const korisnik=useContext(UserContext);
-    // console.log("PODACI UDOMLJENJA:",podaci.udomljen)
-
     const [uredi,postaviUredi]=useState(false);
 
    const Uredi=()=>{
       postaviUredi(!uredi)
     }
-    async function Udomi()
-    {
+
+    const Udomi=()=>{
       funk(podaci.id)
     }
 
@@ -34,13 +32,13 @@ const PopisElement = ({podaci,funk,postaviPodatke}) => {
                 <FormaUredi podaci={podaci} postaviPodatke={postaviPodatke} funk={Uredi}/>
                 :
                 <div className={stil.Podaci}>
-                  <div className={stil.PodaciElm}>IME: {podaci.ime}</div>
-                  <div className={stil.PodaciElm}>VRSTA: {podaci.vrsta}</div>
-                  <div className={stil.PodaciElm}>STATUS: {podaci.udomljen}</div>
-                  <div className={stil.PodaciElm}>ČIPIRAN: {podaci.cip?"Čipiran":"Nije čipiran"}</div>
-                  <div className={stil.PodaciElm}>GODINE: {podaci.godine}</div>
-                  <div className={stil.PodaciElm}>ZADNJI PREGLED: {podaci.pregled}</div>
-                  <div className={stil.PodaciElmOpis}>OPIS: {podaci.opis}</div>
+                  <div className={stil.PodaciElm}><b>IME:</b> {podaci.ime}</div>
+                  <div className={stil.PodaciElm}><b>VRSTA:</b> {podaci.vrsta}</div>
+                  <div className={stil.PodaciElm}><b>STATUS:</b> {podaci.udomljen}</div>
+                  <div className={stil.PodaciElm}><b>ČIPIRAN:</b> {podaci.cip?"Čipiran":"Nije čipiran"}</div>
+                  <div className={stil.PodaciElm}><b>GODINE:</b> {podaci.godine}</div>
+                  <div className={stil.PodaciElm}><b>ZADNJI PREGLED:</b> {podaci.pregled}</div>
+                  <div className={stil.PodaciElmOpis}><b>OPIS:</b> {podaci.opis}</div>
                 </div>
         }
         <div className={stil.Botuni} >
@@ -82,13 +80,13 @@ const PopisElement = ({podaci,funk,postaviPodatke}) => {
 
         <>
         <div className={stil.Podaci}>
-          <div className={stil.PodaciElm}>IME: {podaci.ime}</div>
-          <div className={stil.PodaciElm}>VRSTA: {podaci.vrsta}</div>
-          <div className={stil.PodaciElm}>STATUS: {podaci.udomljen}</div>
-          <div className={stil.PodaciElm}>ČIPIRAN: {podaci.cip?"Čipiran":"Nije čipiran"}</div>
-          <div className={stil.PodaciElm}>GODINE: {podaci.godine}</div>
-          <div className={stil.PodaciElm}>ZADNJI PREGLED: {podaci.pregled}</div>
-          <div className={stil.PodaciElmOpis}>OPIS: {podaci.opis}</div>
+          <div className={stil.PodaciElm}><b>IME:</b> {podaci.ime}</div>
+          <div className={stil.PodaciElm}><b>VRSTA:</b> {podaci.vrsta}</div>
+          <div className={stil.PodaciElm}><b>STATUS:</b> {podaci.udomljen}</div>
+          <div className={stil.PodaciElm}><b>ČIPIRAN:</b> {podaci.cip?"Čipiran":"Nije čipiran"}</div>
+          <div className={stil.PodaciElm}><b>GODINE:</b> {podaci.godine}</div>
+          <div className={stil.PodaciElm}><b>ZADNJI PREGLED:</b> {podaci.pregled}</div>
+          <div className={stil.PodaciElmOpis}><b>OPIS:</b> {podaci.opis}</div>
        </div>
         <div className={stil.Botuni}>
             {
@@ -96,7 +94,7 @@ const PopisElement = ({podaci,funk,postaviPodatke}) => {
               <div></div>
               :
               <div className={stil.BotunRaspored}>
-                <button className={stil.BotunUdomiStil} onClick={funk}>UDOMI</button>
+                <button className={stil.BotunUdomiStil} onClick={Udomi}>UDOMI</button>
               </div>
 
             }

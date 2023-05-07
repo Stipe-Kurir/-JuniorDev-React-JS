@@ -51,8 +51,8 @@ const promjeniToggle=()=>{
                  <Switch  style={{ background: "yellow",  }} onClick={promjeniToggle}  />
                  </> : 
                  <>
-                 <span style={{ color: " rgb(100, 201, 146)"  }}>KORISNIK</span>
-                <Switch  style={{ background: " rgb(100, 201, 146)"  }} onClick={promjeniToggle} checked={context==="korisnik"} />
+                 <span style={{ color: "rgb(13, 176, 87)"  }}>KORISNIK</span>
+                <Switch  style={{ background: "rgb(13, 176, 87)"  }} onClick={promjeniToggle} checked={context==="korisnik"} />
                 </>
                 }
 
