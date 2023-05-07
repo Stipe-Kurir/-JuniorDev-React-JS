@@ -41,43 +41,15 @@ const PopisElement = ({podaci,funk,postaviPodatke}) => {
                   <div className={stil.PodaciElmOpis}><b>OPIS:</b> {podaci.opis}</div>
                 </div>
         }
-        <div className={stil.Botuni} >
-
-          {podaci.udomljen==="udomljen" ? 
-            
-            <div className={stil.BotunRaspored}>
-              {uredi?
-                <></>
-                :
+          <div className={stil.Botuni}>
+                <div className={stil.BotunRaspored}>
                 <button className={stil.BotunUrediStil} onClick={Uredi}>UREDI</button>
-              }
-            </div>
-
-          :
-
-              <div className={stil.BotuniRaspored}>
-                <div className={stil.BotunUdomi}>
-                  <button className={stil.BotunUdomiStil}  onClick={Udomi}>UDOMI</button>
                 </div>
-                <div className={stil.BotunUredi}>
-                {uredi?
-
-                  <></>
-                  :
-                  <button className={stil.BotunUrediStil} onClick={Uredi}>UREDI</button>
-
-              }
-                </div>
-              </div>
-
-          }
-            </div>
-
+          </div>
         </>
 
         :
-
-
+        
         <>
         <div className={stil.Podaci}>
           <div className={stil.PodaciElm}><b>IME:</b> {podaci.ime}</div>
@@ -107,3 +79,37 @@ const PopisElement = ({podaci,funk,postaviPodatke}) => {
 }
 
 export default PopisElement
+
+
+
+
+
+
+// {podaci.udomljen==="udomljen" ? 
+            
+// <div className={stil.BotunRaspored}>
+//   {uredi?
+//     <></>
+//     :
+//     <button className={stil.BotunUrediStil} onClick={Uredi}>UREDI</button>
+//   }
+// </div>
+
+// :
+
+//   <div className={stil.BotunRaspored}>
+//   {/* //   <div className={stil.BotunUdomi}>
+//   //     <button className={stil.BotunUdomiStil}  onClick={Udomi}>UDOMI</button>
+//   //   </div> */}
+//     {/* <div className={stil.BotunUredi}> */}
+//     {uredi?
+
+//       <></>
+//       :
+//       <button className={stil.BotunUrediStil} onClick={Uredi}>UREDI</button>
+
+//   }
+//     </div>
+//   // </div>
+
+// }

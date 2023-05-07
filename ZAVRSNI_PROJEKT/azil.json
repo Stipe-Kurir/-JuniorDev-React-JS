@@ -59,11 +59,25 @@
       "id": 10
     },
     {
-      "kategorija": "trazi",
+      "kategorija": "donirano",
       "tip": "Igračke",
       "vrijednost": "22",
       "opis": "saffsa faasf  saf fsa fas fsa fas asf fasafs f sa fa sfaf sf af sa afs fas fsa fsa saf fsafsafsafs f",
       "id": 11
+    },
+    {
+      "kategorija": "donirano",
+      "tip": "Hrana",
+      "vrijednost": "22",
+      "opis": "sfaf",
+      "id": 12
+    },
+    {
+      "kategorija": "trazi",
+      "tip": "Igračke",
+      "vrijednost": "33",
+      "opis": "33",
+      "id": 13
     }
   ],
   "zivotinje": [
@@ -71,11 +85,11 @@
       "id": 1,
       "ime": "Garfield",
       "vrsta": "Mačka",
-      "cip": true,
+      "cip": false,
       "godine": 44,
       "opis": "Voli lazanje",
       "pregled": "2022-09-23",
-      "udomljen": "udomljen",
+      "udomljen": "nije udomljen",
       "slika": "https://www.kucni-ljubimci.com/wp-content/uploads/2017/05/10-zanimljivih-cinjenica-o-mackama-1.jpg"
     },
     {
@@ -132,6 +146,17 @@
       "udomljen": "nije udomljen",
       "slika": "",
       "id": 11
+    },
+    {
+      "ime": "sasa",
+      "vrsta": "Ostalo",
+      "cip": true,
+      "godine": "11",
+      "opis": "",
+      "pregled": "3333-03-31",
+      "udomljen": "nije udomljen",
+      "slika": "",
+      "id": 12
     }
   ]
 }

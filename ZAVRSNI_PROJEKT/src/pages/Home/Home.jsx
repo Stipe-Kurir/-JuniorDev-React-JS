@@ -12,7 +12,7 @@ const Home = () => {
       <div className={stil.HomeContainer}>
         <div className={stil.Slider}><Slider/></div>
         <div className={stil.Informacije}>
-          <div className={stil.InformacijeNaslov}>AZIL ZA ŽIVOTINJE</div>
+          <div className={stil.InformacijeNaslov}>INFORMACIJE I ZANIMLJIVOSTI</div>
           <div className={stil.InformacijeTekst}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Sed a purus nisi. Quisque bibendum luctus convallis. 

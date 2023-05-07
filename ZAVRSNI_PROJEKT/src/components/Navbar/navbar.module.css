@@ -29,13 +29,16 @@
 
 .LogoNaslov
 {
+    height:75px;
+    width:80px;
     display: flex;
     flex-direction: row;
-    align-items: center; 
     font-weight: bold;
     font-size: 40px;
     margin: 10px 0px;
     background-color: yellow;
+    border-radius: 50%;
+    justify-content: center;
     
 }
 .TekstNaslov
@@ -91,7 +94,6 @@ color: white;
 
 .Opcija:hover
 {
-    /* background-color: rgb(100, 201, 146); */
     background-color:yellow;
     transition: 0.2s;
     color:black;

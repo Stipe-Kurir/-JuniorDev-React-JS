@@ -6,6 +6,7 @@
     flex-direction: row;
     border: 3px solid black;
     border-top: none;
+    justify-content: center;
 }
 .footerInfo{
     width:40%;
@@ -29,7 +30,7 @@
 }
 
 .Item{
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     color: white;
 }
