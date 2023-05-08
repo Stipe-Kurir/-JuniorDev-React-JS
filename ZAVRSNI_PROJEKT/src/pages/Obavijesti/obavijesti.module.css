@@ -23,10 +23,9 @@
     justify-content: center;
 }
 .BotunObavijest{
-    width:30%;
+    width:40%;
     padding:25px;
     font-size: 25px;
-    font-weight: bold;
     cursor: pointer;
     border:2px solid black;
     border-radius: 10px;
@@ -66,9 +65,9 @@
     justify-content: center;
     background-color: yellow;
     font-size: 25px;
-    font-weight: bold;
     border-radius: 5px 5px 0px 0px;
     padding: 10px 0px;
+    font-weight: bold;
 }
 
 .NovaObavijestForm{

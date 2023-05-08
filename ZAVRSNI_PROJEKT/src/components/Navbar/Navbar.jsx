@@ -16,10 +16,7 @@ const navigationAdmin=[
     {name:'unos',href:'/unos'},
 ]
 
-
 const {context,setContext}=useContext(UserContext);
-
-
 
 
 const promjeniToggle=()=>{
@@ -87,15 +84,3 @@ const promjeniToggle=()=>{
 
 export default Navbar
 
-
-//OVO TI JE BILO U stil.korisnik -->navbar
-
-   {/* <div>
-                    <input type="radio"  name="user" value="admin" defaultChecked={context==="admin"} onChange={promjeniContext}/>
-                    <label htmlFor="admin">Admin</label>
-                </div>
-
-                <div>
-                    <input type="radio"  name="user" value="korisnik" defaultChecked={context==="korisnik"} onChange={promjeniContext}/>
-                    <label htmlFor="korisnik">Korisnik</label>
-                </div> */}

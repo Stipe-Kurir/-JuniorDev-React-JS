@@ -19,18 +19,12 @@ const Donacije = () => {
   const [donacije,postaviDonacije]=useState([])
 
   
-
   useEffect(() => {
     axios
       .get("http://localhost:3001/donacije")
       .then(res => postaviDonacije(res.data));
   }, []);
   
-
-
-  console.log(donacije)
-
-
   const prikaziFormu=()=>{
     postaviFormu(!forma)
   }
@@ -90,9 +84,9 @@ const Donacije = () => {
       </div>
       </>
 
-      //POVIŠE : je sve vezano za admina
+     
       :
-      //KORISNIK
+   
       <>
        <div className={stil.DonacijaForma}>
         {forma ? 

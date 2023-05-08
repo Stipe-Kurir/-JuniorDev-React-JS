@@ -123,7 +123,7 @@ useEffect(() => {
 
               <div className={stil.NovaObavijest}>
 
-                <div className={stil.NovaObavijestNaslov}>Unesite novu obavijest</div>
+                <div className={stil.NovaObavijestNaslov}>UNESITE NOVU OBAVIJEST</div>
 
                 
                    { korisnik.context === "admin" ?
@@ -192,7 +192,7 @@ useEffect(() => {
                : 
                <div className={stil.UnosBotun}>
   
-               <button className={stil.BotunObavijest} onClick={DodajObavijest}>Unesite novu obavijest</button>
+               <button className={stil.BotunObavijest} onClick={DodajObavijest}>UNESITE NOVU OBAVIJEST</button>
              </div>
           }
 
@@ -215,58 +215,4 @@ useEffect(() => {
 export default Obavijesti
 
 
- {/* <div className={stil.PrikazObavijesti}>
-          {obavijesti.map(rez=>(
-            <div key={rez.id}>{rez.naslov}</div>
-          )) }
-        </div> */}
-
-        // {botun ? 
-
-        //   <div className={stil.NovaObavijest}>
-
-        //     <div className={stil.NovaObavijestNaslov}>Unosite novu obavijest</div>
-
-        //     <form className={stil.NovaObavijestForm} onSubmit={UnesiObavijest}>
-        //       <div className={stil.Input}>
-        //         <div className={stil.Opis}>
-        //           <label htmlFor="naslov">NASLOV:</label> 
-        //           </div>
-        //           <input type="text" id="naslov" name="naslov" maxLength="20" value={podaci.naslov} onChange={UnosVrijednosti} required/>
-        //       </div>
-        //       <div className={stil.Input}>
-        //       <div className={stil.Opis}>
-        //           <label htmlFor="tekst">TEKST:</label> 
-        //           </div>
-        //           <input type="text" id="tekst" name="tekst" minLength="10" maxLength="200" value={podaci.tekst} onChange={UnosVrijednosti}  required/>
-        //       </div>
-             
-        //        {korisnik.context === "admin" ?
-
-        //        <div className={stil.NovaObavijestPotvrda}>
-        //            <div className={stil.Input}>
-        //       <div className={stil.Opis}>
-        //           <label htmlFor="vazno">VAŽNO:</label> 
-        //           </div>
-        //           <input className={stil.Vazno} type="checkbox"  id="vazno" value={podaci.vazno} onChange={UnosCheck}  checked={podaci.vazno} name="vazno" />
-        //       </div>
-        //           <div className={stil.NovaObavijestSpremi}>
-        //           <button  className={stil.Spremi} type="submit">Spremi</button>
-        //         </div>
-        //         </div>
-
-        //         :
-        //         <div className={stil.NovaObavijestPotvrda}>
-        //           <div className={stil.NovaObavijestSpremi}>
-        //           <button  className={stil.Spremi} type="submit">Spremi</button>
-        //         </div>
-        //         </div>
-
-        //        }
-                
-    
-        //     </form>  
-                       
-        //   </div>
-        //    : 
-        //    <div></div>}
+ 

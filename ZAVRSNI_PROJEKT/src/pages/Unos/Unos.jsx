@@ -5,6 +5,9 @@ import stil from './unos.module.css'
 import { useContext,useState } from 'react'
 import UserContext from '../../components/Context/UserContext'
 import axios from 'axios';
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+
 
 const Unos = () => {
 
@@ -84,6 +87,7 @@ const Unos = () => {
        {korisnik.context==="admin" ?
        <div className={stil.UnosAdmin}>
         <div className={stil.UnosAdminNaslov}>UNOS NOVE ŽIVOTINJE</div>
+    
         <form className={stil.UnosAdminForm} onSubmit={UnesiZivotinju}>
           
           <div className={stil.Input}>  
@@ -134,17 +138,10 @@ const Unos = () => {
             <label  className={stil.label}  htmlFor="pregled">UNESITE DATUM PREGLEDA:</label>
               
             <div className={stil.InputBar}>
-            <input 
-              className={stil.inputDatum}
-              type="date"
-              id="pregled"
-              name="pregled"
-              value={podaci.pregled} 
-              onChange={UnosVrijednosti}
-              required>
-              </input>
+               <DatePicker 
+                 selected={podaci.pregled} maxDate={new Date()}  className={stil.inputGodine} onChange={datum=>postaviPodatke({...podaci,pregled:datum})}  dateFormat='dd/MM/yyyy' required/> 
                 </div>
-             
+    
         </div>
         <div className={stil.Check}>
             <input className={stil.CheckBox} type="checkbox" onChange={UnosCheck} id="cip"  value={podaci.cip} checked={podaci.cip===true}

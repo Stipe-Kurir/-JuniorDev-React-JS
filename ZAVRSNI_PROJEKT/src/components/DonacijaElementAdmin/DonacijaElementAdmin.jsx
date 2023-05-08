@@ -5,17 +5,6 @@ import axios from 'axios'
 
 
 const DonacijaElementAdmin = ({donacije,postaviDonacije}) => {
-
-  //NAPRAVITI SVE POSEBNE FUNK--> za admina je ovo
-  //Izbrisi->izbrisati komponentu
-  //donirano->stavi kategoriju iz trazi u donirano
-  //Prihvati->stavi kategoriju iz nudi u donirano
-  //Ponovi->stavi kategoriju iz donirano u trazi
-
-  //KOD KORISNIKA cemo napraviti posebnu komponentu->DonacijaElementKorisnik
-  //On ce imati SAMO botun doniraj za kategoriju trazi->i on stavi u kategoruju donirano
-  //Ostalo nece imati botune
-
   
   
   async function handleIzbrisi(){
@@ -48,15 +37,8 @@ async function handlePonovi(){
    
   }
 
-
   const [filter,postaviFilter]=useState(donacije.kategorija)
 
-  console.log("trenutni filter za donaciju",filter)
-
-
-
-  
-  console.log("DONACIJE U ELEMENTU",donacije)
 
   return (
     <div className={stil.DonacijaPrikaz}>

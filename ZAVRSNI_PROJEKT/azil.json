@@ -88,7 +88,7 @@
       "cip": false,
       "godine": 44,
       "opis": "Voli lazanje",
-      "pregled": "2022-09-23",
+      "pregled": "2022-09-23T00:00:00.000Z",
       "udomljen": "nije udomljen",
       "slika": "https://www.kucni-ljubimci.com/wp-content/uploads/2017/05/10-zanimljivih-cinjenica-o-mackama-1.jpg"
     },
@@ -99,7 +99,7 @@
       "cip": true,
       "godine": 40,
       "opis": "Više od običnog psa",
-      "pregled": "2000-02-13",
+      "pregled": "2000-02-13T00:00:00.000Z",
       "udomljen": "udomljen",
       "slika": "https://imengine.prod.srp.navigacloud.com/?uuid=c81b4759-003b-55f4-bd03-c1d14729106e&type=primary&q=72&width=886"
     },
@@ -109,7 +109,7 @@
       "cip": true,
       "godine": "22",
       "opis": "dsads",
-      "pregled": "2222-02-22",
+      "pregled": "2022-02-22T00:00:00.000Z",
       "udomljen": "nije udomljen",
       "slika": "https://slika.nezavisne.rs/2014/03/750x450/20140312170637_235118.jpg",
       "id": 8
@@ -120,43 +120,21 @@
       "cip": true,
       "godine": "22",
       "opis": "dsad",
-      "pregled": "2222-02-22",
-      "udomljen": "nije udomljen",
+      "pregled": "2022-02-17T00:00:00.000Z",
+      "udomljen": "udomljen",
       "slika": "https://d19p4plxg0u3gz.cloudfront.net/eb8a1730-35a7-11eb-b233-0242ac120025/original",
       "id": 9
     },
     {
       "ime": "daads",
       "vrsta": "Pas",
-      "cip": true,
-      "godine": "22",
-      "opis": "asfasffsa",
-      "pregled": "2222-02-22",
+      "cip": false,
+      "godine": "20",
+      "opis": "asfasffsadsas",
+      "pregled": "2022-02-08T00:00:00.000Z",
       "udomljen": "udomljen",
       "slika": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBVBGQpM-a3S6sCn-zDaQO45oe0nPGz986fyli_eV&s",
       "id": 10
-    },
-    {
-      "ime": "22",
-      "vrsta": "Pas",
-      "cip": true,
-      "godine": "222",
-      "opis": "safasffsa\nfsaf\nsaf\ns\nfsa\nfsa\nfs\nfs\nfsa\nfas\nfsa\ngsa\ngsgsdaga\nsdg\ndg\ndsg\ndsgs\ng\ndsg\ng\ndsg\ndg\ndg\nsg\ndsg",
-      "pregled": "1111-11-11",
-      "udomljen": "nije udomljen",
-      "slika": "",
-      "id": 11
-    },
-    {
-      "ime": "sasa",
-      "vrsta": "Ostalo",
-      "cip": true,
-      "godine": "11",
-      "opis": "",
-      "pregled": "3333-03-31",
-      "udomljen": "nije udomljen",
-      "slika": "",
-      "id": 12
     }
   ]
 }

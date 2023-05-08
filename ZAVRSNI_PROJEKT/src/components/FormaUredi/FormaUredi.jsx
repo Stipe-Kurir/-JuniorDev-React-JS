@@ -2,6 +2,9 @@ import React from 'react'
 import stil from "./formaUredi.module.css"
 import {useState} from 'react'
 import axios from 'axios'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+
 
 const FormaUredi = ({podaci,postaviPodatke,funk}) => {
 
@@ -19,7 +22,7 @@ const FormaUredi = ({podaci,postaviPodatke,funk}) => {
     cip:podaci.cip,
     godine:podaci.godine,
     opis:podaci.opis,
-    pregled:podaci.pregled,
+    pregled:new Date(Date.parse(podaci.pregled)),
     udomljen:podaci.udomljen
   });
 
@@ -66,9 +69,6 @@ const FormaUredi = ({podaci,postaviPodatke,funk}) => {
   }
 
 
-  // console.log("PROMJENJENO:",promjenjeno)
-
-
   return (
     <form className={stil.Podaci} onSubmit={Spremi}>
           <div className={stil.PodaciElm}><b>IME:</b> {promjenjeno.ime}</div>
@@ -89,16 +89,9 @@ const FormaUredi = ({podaci,postaviPodatke,funk}) => {
             </div>
           <div className={stil.PodaciElm}>
           <b>ZADNJI PREGLED:</b>
-            <input 
-              // className={stil.OdabirUnos}
-              type="date"
-              id="pregled"
-              name="pregled"
-              value={promjenjeno.pregled} 
-              onChange={UnosVrijednosti}
-              required>
-              </input>
-            </div>
+              <DatePicker 
+                 selected={promjenjeno.pregled} maxDate={new Date()} className={stil.inputG}  onChange={datum=>postaviPromjenjeno({...promjenjeno,pregled:datum})}  dateFormat='dd/MM/yyyy' required/> 
+            </div> 
           <div className={stil.PodaciElmOpis}>
           <b>OPIS:</b>  <input className={stil.input} type="text" id="opis" name="opis"  maxLength="100" value={promjenjeno.opis} onChange={UnosVrijednosti}  />
             </div>

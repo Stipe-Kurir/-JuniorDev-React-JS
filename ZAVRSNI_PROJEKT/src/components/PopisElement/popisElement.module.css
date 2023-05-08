@@ -104,6 +104,20 @@
     cursor: pointer;
     background-color: white;
 }
+.BotunUrediStilZatvori
+{
+    padding:10px 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.BotunUrediStilZatvori:hover{
+    background-color: red;
+    transition: 0.2s;
+}
 
 .BotunUrediStil:hover{
     background-color: rgb(13, 176, 87);
